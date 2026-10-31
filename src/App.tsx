@@ -13,7 +13,7 @@ import { SettingsTab } from './components/settings/SettingsTab';
 import { CandidateModal } from './components/candidate/CandidateModal';
 import { CompareModal } from './components/candidate/CompareModal';
 import { ComplianceCertModal } from './components/fairness/ComplianceCertModal';
-import { LoginPortal, DEMO_USERS } from './components/auth/LoginPortal';
+import { LoginPortal } from './components/auth/LoginPortal';
 
 import { Candidate, JobOpening, JobWeights, ScreeningStatus, AuditLogEntry, UserProfile } from './types';
 import { INITIAL_CANDIDATES, INITIAL_JOBS, INITIAL_AUDIT_LOGS } from './data/mockData';

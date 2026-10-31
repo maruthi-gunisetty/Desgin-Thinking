@@ -4,12 +4,7 @@ import {
   Plus, 
   Sliders, 
   MapPin, 
-  Calendar, 
   Users, 
-  Check, 
-  AlertCircle, 
-  Edit3, 
-  Search,
   CheckCircle2,
   X
 } from 'lucide-react';

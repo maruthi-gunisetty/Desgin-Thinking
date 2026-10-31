@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { ActiveTab } from './Sidebar';
 import { UserProfile } from '../../types';
-import { DEMO_USERS } from '../auth/LoginPortal';
+import { DEMO_USERS } from '../../data/mockUsers';
 
 interface HeaderProps {
   activeTab: ActiveTab;

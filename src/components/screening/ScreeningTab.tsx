@@ -340,7 +340,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-blue-600" />
+            <Sparkles className="w-5 h-5 text-[#6D86A1]" />
             AI Resume Parser & Blind Screening Simulator
           </h2>
           <p className="text-xs text-slate-500 mt-1 max-w-3xl">
@@ -357,7 +357,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
               onClick={() => handleSelectSample(sample)}
               className="text-xs px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 font-medium transition-colors flex items-center gap-1.5"
             >
-              <span className={`text-[10px] font-bold px-1 rounded uppercase ${sample.format === 'pdf' ? 'bg-rose-100 text-rose-700' : 'bg-blue-100 text-blue-700'}`}>
+              <span className={`text-[10px] font-bold px-1 rounded uppercase ${sample.format === 'pdf' ? 'bg-rose-100 text-rose-700' : 'bg-[#6D86A1]/20 text-[#3E5062]'}`}>
                 {sample.format}
               </span>
               <span>{sample.title.split(' ')[0]} ({sample.title.split('–')[1]?.trim().split(' ')[0]})</span>
@@ -379,7 +379,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
               <select
                 value={selectedJobId}
                 onChange={(e) => setSelectedJobId(e.target.value)}
-                className="w-full text-xs font-medium p-2.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full text-xs font-medium p-2.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#6D86A1]"
               >
                 {jobs.map((job) => (
                   <option key={job.id} value={job.id}>
