@@ -90,7 +90,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
               const j = jobs.find(job => job.id === e.target.value);
               if (j) setActiveWeights({ ...j.weights });
             }}
-            className="text-xs font-semibold py-2 px-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#004741] focus:border-[#004741]"
+            className="text-xs font-semibold py-2 px-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#6D86A1] focus:border-[#6D86A1]"
           >
             <option value="ALL">All Requisitions ({jobs.length})</option>
             {jobs.map(j => (
@@ -101,10 +101,10 @@ export const RankingTab: React.FC<RankingTabProps> = ({
           <button
             onClick={() => setIsAnonymized(!isAnonymized)}
             className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium border transition-colors ${
-              isAnonymized ? 'bg-[#004741] text-[#F0EDE4] border-[#004741]' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
+              isAnonymized ? 'bg-[#6D86A1] text-[#EEEAE1] border-[#6D86A1]' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
             }`}
           >
-            {isAnonymized ? <EyeOff className="w-4 h-4 text-[#F0EDE4]" /> : <Eye className="w-4 h-4" />}
+            {isAnonymized ? <EyeOff className="w-4 h-4 text-[#EEEAE1]" /> : <Eye className="w-4 h-4" />}
             <span>{isAnonymized ? 'Blind Mode Active' : 'Standard View'}</span>
           </button>
         </div>
@@ -117,14 +117,14 @@ export const RankingTab: React.FC<RankingTabProps> = ({
           <div className="stat-card p-5 space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-200">
               <div className="flex items-center gap-2">
-                <Sliders className="w-4 h-4 text-[#004741]" />
-                <h3 className="font-bold text-xs uppercase tracking-wider text-[#004741]">
+                <Sliders className="w-4 h-4 text-[#6D86A1]" />
+                <h3 className="font-bold text-xs uppercase tracking-wider text-[#3E5062]">
                   Weight Simulator
                 </h3>
               </div>
               <button
                 onClick={handleResetWeights}
-                className="text-[11px] text-[#004741] hover:underline flex items-center gap-1 font-semibold"
+                className="text-[11px] text-[#6D86A1] hover:underline flex items-center gap-1 font-semibold"
                 title="Reset to default role weights"
               >
                 <RotateCcw className="w-3 h-3" />
@@ -141,7 +141,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
               <div>
                 <div className="flex justify-between font-medium text-slate-700 mb-1">
                   <span>Skills Alignment:</span>
-                  <span className="font-mono font-bold text-[#004741]">{activeWeights.skills}%</span>
+                  <span className="font-mono font-bold text-[#3E5062]">{activeWeights.skills}%</span>
                 </div>
                 <input
                   type="range"
@@ -149,7 +149,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
                   max="60"
                   value={activeWeights.skills}
                   onChange={(e) => setActiveWeights({ ...activeWeights, skills: Number(e.target.value) })}
-                  className="w-full accent-[#004741]"
+                  className="w-full accent-[#6D86A1]"
                 />
               </div>
 
@@ -157,7 +157,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
               <div>
                 <div className="flex justify-between font-medium text-slate-700 mb-1">
                   <span>Relevant Experience:</span>
-                  <span className="font-mono font-bold text-[#004741]">{activeWeights.experience}%</span>
+                  <span className="font-mono font-bold text-[#3E5062]">{activeWeights.experience}%</span>
                 </div>
                 <input
                   type="range"
@@ -165,7 +165,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
                   max="50"
                   value={activeWeights.experience}
                   onChange={(e) => setActiveWeights({ ...activeWeights, experience: Number(e.target.value) })}
-                  className="w-full accent-[#004741]"
+                  className="w-full accent-[#6D86A1]"
                 />
               </div>
 
@@ -173,7 +173,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
               <div>
                 <div className="flex justify-between font-medium text-slate-700 mb-1">
                   <span>Qualifications / Degrees:</span>
-                  <span className="font-mono font-bold text-emerald-700">{activeWeights.qualifications}%</span>
+                  <span className="font-mono font-bold text-[#3E5062]">{activeWeights.qualifications}%</span>
                 </div>
                 <input
                   type="range"
@@ -181,7 +181,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
                   max="30"
                   value={activeWeights.qualifications}
                   onChange={(e) => setActiveWeights({ ...activeWeights, qualifications: Number(e.target.value) })}
-                  className="w-full accent-[#004741]"
+                  className="w-full accent-[#6D86A1]"
                 />
               </div>
 
@@ -189,7 +189,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
               <div>
                 <div className="flex justify-between font-medium text-slate-700 mb-1">
                   <span>Technical Projects:</span>
-                  <span className="font-mono font-bold text-amber-700">{activeWeights.projects}%</span>
+                  <span className="font-mono font-bold text-[#3E5062]">{activeWeights.projects}%</span>
                 </div>
                 <input
                   type="range"
@@ -197,7 +197,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
                   max="30"
                   value={activeWeights.projects}
                   onChange={(e) => setActiveWeights({ ...activeWeights, projects: Number(e.target.value) })}
-                  className="w-full accent-[#004741]"
+                  className="w-full accent-[#6D86A1]"
                 />
               </div>
 
@@ -205,7 +205,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
               <div>
                 <div className="flex justify-between font-medium text-slate-700 mb-1">
                   <span>Certifications:</span>
-                  <span className="font-mono font-bold text-rose-700">{activeWeights.certifications}%</span>
+                  <span className="font-mono font-bold text-[#3E5062]">{activeWeights.certifications}%</span>
                 </div>
                 <input
                   type="range"
@@ -213,7 +213,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
                   max="20"
                   value={activeWeights.certifications}
                   onChange={(e) => setActiveWeights({ ...activeWeights, certifications: Number(e.target.value) })}
-                  className="w-full accent-[#004741]"
+                  className="w-full accent-[#6D86A1]"
                 />
               </div>
             </div>
@@ -230,7 +230,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
         <div className="lg:col-span-8">
           <div className="stat-card overflow-hidden">
             <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
-              <h3 className="font-bold text-xs uppercase tracking-wider text-[#004741]">
+              <h3 className="font-bold text-xs uppercase tracking-wider text-[#3E5062]">
                 Live Ranked Standings ({rankedCandidates.length} Candidates)
               </h3>
               <span className="text-[11px] text-slate-500 font-medium">
@@ -247,13 +247,13 @@ export const RankingTab: React.FC<RankingTabProps> = ({
                   <div
                     key={cand.id}
                     onClick={() => onSelectCandidate(cand)}
-                    className="p-4 hover:bg-[#F0EDE4]/40 transition-colors cursor-pointer flex items-center justify-between gap-4"
+                    className="p-4 hover:bg-[#EEEAE1]/40 transition-colors cursor-pointer flex items-center justify-between gap-4"
                   >
                     <div className="flex items-center gap-3.5">
                       {/* Rank badge */}
                       <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-extrabold text-xs shadow-sm ${
                         rank === 1 
-                          ? 'bg-[#004741] text-[#F0EDE4] ring-2 ring-[#00544D]' 
+                          ? 'bg-[#6D86A1] text-[#EEEAE1] ring-2 ring-[#4D6277]' 
                           : rank === 2 
                             ? 'bg-slate-300 text-slate-800' 
                             : rank === 3 
@@ -266,7 +266,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
                       {/* Candidate info */}
                       <div>
                         <div className="flex items-center gap-2">
-                          <h4 className="font-bold text-sm text-[#004741] hover:text-[#002B27] transition-colors">
+                          <h4 className="font-bold text-sm text-[#3E5062] hover:text-[#1E293B] transition-colors">
                             {name}
                           </h4>
                           <span className="text-[10px] font-mono text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded">
@@ -288,7 +288,7 @@ export const RankingTab: React.FC<RankingTabProps> = ({
                     <div className="flex items-center gap-4">
                       <div className="text-right">
                         <div className="flex items-baseline gap-1 justify-end">
-                          <span className="text-xl font-black text-[#004741]">{cand.overallScore}</span>
+                          <span className="text-xl font-black text-[#3E5062]">{cand.overallScore}</span>
                           <span className="text-[10px] font-semibold text-slate-400">/100</span>
                         </div>
                         <div className="text-[10px] text-slate-400 font-medium">

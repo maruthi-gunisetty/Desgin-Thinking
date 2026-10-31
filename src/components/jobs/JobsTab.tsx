@@ -98,7 +98,7 @@ export const JobsTab: React.FC<JobsTabProps> = ({
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-            <Briefcase className="w-5 h-5 text-blue-600" />
+            <Briefcase className="w-5 h-5 text-[#6D86A1]" />
             Enterprise Requisition & Evaluation Weight Management
           </h2>
           <p className="text-xs text-slate-500 mt-1 max-w-2xl">
@@ -108,9 +108,9 @@ export const JobsTab: React.FC<JobsTabProps> = ({
 
         <button
           onClick={() => setIsCreatingJob(true)}
-          className="flex items-center gap-1.5 px-4 py-2.5 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded-xl text-xs font-bold shadow-md transition-all"
+          className="flex items-center gap-1.5 px-4 py-2.5 bg-[#6D86A1] hover:bg-[#5C748D] text-[#EEEAE1] rounded-xl text-xs font-bold shadow-md transition-all"
         >
-          <Plus className="w-4 h-4 text-[#F0EDE4]" />
+          <Plus className="w-4 h-4 text-[#EEEAE1]" />
           <span>Create New Requisition</span>
         </button>
       </div>
@@ -119,7 +119,7 @@ export const JobsTab: React.FC<JobsTabProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Column (5 cols): Job Openings */}
         <div className="lg:col-span-5 space-y-3">
-          <div className="text-xs font-bold text-[#004741] uppercase tracking-wider px-1">
+          <div className="text-xs font-bold text-[#3E5062] uppercase tracking-wider px-1">
             Active Requisitions ({jobs.length})
           </div>
 
@@ -132,7 +132,7 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                   onClick={() => handleSelectJob(job)}
                   className={`p-4 rounded-xl border cursor-pointer transition-all ${
                     isSelected
-                      ? 'bg-[#F0EDE4]/60 border-[#004741] shadow-sm ring-1 ring-[#004741]'
+                      ? 'bg-[#EEEAE1]/60 border-[#6D86A1] shadow-sm ring-1 ring-[#6D86A1]'
                       : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-[#FAF8F5]'
                   }`}
                 >
@@ -170,8 +170,8 @@ export const JobsTab: React.FC<JobsTabProps> = ({
               {/* Job Header */}
               <div className="flex items-start justify-between pb-4 border-b border-slate-200">
                 <div>
-                  <span className="text-xs font-mono font-semibold text-[#004741] block mb-1">{selectedJob.id}</span>
-                  <h3 className="text-base font-extrabold text-[#004741]">{selectedJob.title}</h3>
+                  <span className="text-xs font-mono font-semibold text-[#6D86A1] block mb-1">{selectedJob.id}</span>
+                  <h3 className="text-base font-extrabold text-[#3E5062]">{selectedJob.title}</h3>
                   <p className="text-xs text-slate-500 mt-0.5">{selectedJob.department} &bull; {selectedJob.location}</p>
                 </div>
                 <div className="text-right">
@@ -181,7 +181,7 @@ export const JobsTab: React.FC<JobsTabProps> = ({
               </div>
 
               {/* Description */}
-              <p className="text-xs text-slate-600 leading-relaxed bg-[#FAF8F5] p-3.5 rounded-xl border border-[#E4DFD3]">
+              <p className="text-xs text-slate-600 leading-relaxed bg-[#FAF8F5] p-3.5 rounded-xl border border-[#DDD7CA]">
                 {selectedJob.description}
               </p>
 
@@ -193,7 +193,7 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {selectedJob.requiredSkills.map((sk, idx) => (
-                      <span key={idx} className="text-xs bg-[#004741]/10 border border-[#004741]/25 text-[#004741] px-2.5 py-1 rounded-lg font-semibold">
+                      <span key={idx} className="text-xs bg-[#6D86A1]/15 border border-[#6D86A1]/30 text-[#3E5062] px-2.5 py-1 rounded-lg font-semibold">
                         {sk}
                       </span>
                     ))}
@@ -219,11 +219,11 @@ export const JobsTab: React.FC<JobsTabProps> = ({
               </div>
 
               {/* Scoring Weights Tuner Section */}
-              <div className="p-5 rounded-2xl bg-[#004741] text-[#F0EDE4] space-y-4 border border-[#003530]">
-                <div className="flex items-center justify-between pb-3 border-b border-[#00544D]">
+              <div className="p-5 rounded-2xl bg-[#3E5062] text-[#EEEAE1] space-y-4 border border-[#2E3D4C]">
+                <div className="flex items-center justify-between pb-3 border-b border-[#4D6277]">
                   <div className="flex items-center gap-2">
-                    <Sliders className="w-4 h-4 text-[#F0EDE4]" />
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#F0EDE4]">
+                    <Sliders className="w-4 h-4 text-[#EEEAE1]" />
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#EEEAE1]">
                       Merit Scoring Weight Allocation
                     </h4>
                   </div>
@@ -237,9 +237,9 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                 <div className="space-y-3 text-xs">
                   {/* Weight 1: Skills */}
                   <div>
-                    <div className="flex justify-between text-[#F0EDE4] mb-1">
+                    <div className="flex justify-between text-[#EEEAE1] mb-1">
                       <span>Technical Skills Alignment:</span>
-                      <span className="font-mono font-bold text-[#F0EDE4]">{editingWeights.skills}%</span>
+                      <span className="font-mono font-bold text-[#EEEAE1]">{editingWeights.skills}%</span>
                     </div>
                     <input
                       type="range"
@@ -247,15 +247,15 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                       max="60"
                       value={editingWeights.skills}
                       onChange={(e) => setEditingWeights({ ...editingWeights, skills: Number(e.target.value) })}
-                      className="w-full accent-[#F0EDE4]"
+                      className="w-full accent-[#EEEAE1]"
                     />
                   </div>
 
                   {/* Weight 2: Experience */}
                   <div>
-                    <div className="flex justify-between text-[#F0EDE4] mb-1">
+                    <div className="flex justify-between text-[#EEEAE1] mb-1">
                       <span>Relevant Experience & Tenure:</span>
-                      <span className="font-mono font-bold text-[#F0EDE4]">{editingWeights.experience}%</span>
+                      <span className="font-mono font-bold text-[#EEEAE1]">{editingWeights.experience}%</span>
                     </div>
                     <input
                       type="range"
@@ -263,15 +263,15 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                       max="50"
                       value={editingWeights.experience}
                       onChange={(e) => setEditingWeights({ ...editingWeights, experience: Number(e.target.value) })}
-                      className="w-full accent-[#F0EDE4]"
+                      className="w-full accent-[#EEEAE1]"
                     />
                   </div>
 
                   {/* Weight 3: Qualifications */}
                   <div>
-                    <div className="flex justify-between text-[#F0EDE4] mb-1">
+                    <div className="flex justify-between text-[#EEEAE1] mb-1">
                       <span>Job-Related Qualifications & Degrees:</span>
-                      <span className="font-mono font-bold text-emerald-300">{editingWeights.qualifications}%</span>
+                      <span className="font-mono font-bold text-[#EEEAE1]">{editingWeights.qualifications}%</span>
                     </div>
                     <input
                       type="range"
@@ -279,15 +279,15 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                       max="30"
                       value={editingWeights.qualifications}
                       onChange={(e) => setEditingWeights({ ...editingWeights, qualifications: Number(e.target.value) })}
-                      className="w-full accent-[#F0EDE4]"
+                      className="w-full accent-[#EEEAE1]"
                     />
                   </div>
 
                   {/* Weight 4: Projects */}
                   <div>
-                    <div className="flex justify-between text-[#F0EDE4] mb-1">
+                    <div className="flex justify-between text-[#EEEAE1] mb-1">
                       <span>Verified Technical Projects & Impact:</span>
-                      <span className="font-mono font-bold text-amber-300">{editingWeights.projects}%</span>
+                      <span className="font-mono font-bold text-[#EEEAE1]">{editingWeights.projects}%</span>
                     </div>
                     <input
                       type="range"
@@ -295,15 +295,15 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                       max="30"
                       value={editingWeights.projects}
                       onChange={(e) => setEditingWeights({ ...editingWeights, projects: Number(e.target.value) })}
-                      className="w-full accent-[#F0EDE4]"
+                      className="w-full accent-[#EEEAE1]"
                     />
                   </div>
 
                   {/* Weight 5: Certifications */}
                   <div>
-                    <div className="flex justify-between text-[#F0EDE4] mb-1">
+                    <div className="flex justify-between text-[#EEEAE1] mb-1">
                       <span>Professional Certifications:</span>
-                      <span className="font-mono font-bold text-teal-200">{editingWeights.certifications}%</span>
+                      <span className="font-mono font-bold text-[#EEEAE1]">{editingWeights.certifications}%</span>
                     </div>
                     <input
                       type="range"
@@ -311,22 +311,22 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                       max="20"
                       value={editingWeights.certifications}
                       onChange={(e) => setEditingWeights({ ...editingWeights, certifications: Number(e.target.value) })}
-                      className="w-full accent-[#F0EDE4]"
+                      className="w-full accent-[#EEEAE1]"
                     />
                   </div>
                 </div>
 
                 <div className="pt-2 flex items-center justify-between">
-                  <span className="text-[11px] text-teal-200">
+                  <span className="text-[11px] text-[#EEEAE1]/80">
                     Weights apply universally to all candidates in this requisition.
                   </span>
 
                   <button
                     onClick={handleSaveWeights}
                     disabled={currentTotal !== 100}
-                    className="px-4 py-2 bg-[#F0EDE4] hover:bg-[#E4DFD3] disabled:opacity-40 text-[#004741] rounded-lg text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
+                    className="px-4 py-2 bg-[#EEEAE1] hover:bg-[#E2DDD2] disabled:opacity-40 text-[#3E5062] rounded-lg text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#004741]" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#3E5062]" />
                     <span>{isSaved ? 'Weights Updated & Applied!' : 'Save Criteria Weights'}</span>
                   </button>
                 </div>
@@ -344,9 +344,9 @@ export const JobsTab: React.FC<JobsTabProps> = ({
       {isCreatingJob && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex justify-center items-center p-4">
           <div className="bg-white w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col">
-            <div className="px-6 py-4 bg-[#004741] text-white flex items-center justify-between border-b border-[#003530]">
+            <div className="px-6 py-4 bg-[#3E5062] text-white flex items-center justify-between border-b border-[#2E3D4C]">
               <h3 className="text-sm font-bold flex items-center gap-2">
-                <Briefcase className="w-4 h-4 text-[#F0EDE4]" />
+                <Briefcase className="w-4 h-4 text-[#EEEAE1]" />
                 Create New Enterprise Requisition
               </h3>
               <button
@@ -445,7 +445,7 @@ export const JobsTab: React.FC<JobsTabProps> = ({
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold"
+                  className="px-4 py-2 bg-[#6D86A1] hover:bg-[#5C748D] text-[#EEEAE1] rounded-lg font-bold transition-colors"
                 >
                   Create Requisition
                 </button>

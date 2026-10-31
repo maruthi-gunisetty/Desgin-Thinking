@@ -58,7 +58,7 @@ export const ExplainabilityTab: React.FC<ExplainabilityTabProps> = ({
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <BrainCircuit className="w-5 h-5 text-[#004741]" />
+            <BrainCircuit className="w-5 h-5 text-[#6D86A1]" />
             <h2 className="text-lg font-bold text-slate-900">
               Explainable AI (XAI) & Human Oversight Inspector
             </h2>
@@ -71,10 +71,10 @@ export const ExplainabilityTab: React.FC<ExplainabilityTabProps> = ({
         <button
           onClick={() => setIsAnonymized(!isAnonymized)}
           className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium border transition-colors ${
-            isAnonymized ? 'bg-[#004741] border-[#004741] text-[#F0EDE4] font-semibold' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
+            isAnonymized ? 'bg-[#6D86A1] border-[#6D86A1] text-[#EEEAE1] font-semibold' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
           }`}
         >
-          {isAnonymized ? <EyeOff className="w-4 h-4 text-[#F0EDE4]" /> : <Eye className="w-4 h-4" />}
+          {isAnonymized ? <EyeOff className="w-4 h-4 text-[#EEEAE1]" /> : <Eye className="w-4 h-4" />}
           <span>{isAnonymized ? 'Blind Mode Active' : 'Standard View'}</span>
         </button>
       </div>
@@ -83,7 +83,7 @@ export const ExplainabilityTab: React.FC<ExplainabilityTabProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Column: Candidate List */}
         <div className="lg:col-span-4 space-y-3">
-          <div className="text-xs font-bold text-slate-500 uppercase tracking-wider px-1">
+          <div className="text-xs font-bold text-[#3E5062] uppercase tracking-wider px-1">
             Candidate Evaluations ({candidates.length})
           </div>
 
@@ -97,8 +97,8 @@ export const ExplainabilityTab: React.FC<ExplainabilityTabProps> = ({
                   onClick={() => handleSelectCandidate(cand)}
                   className={`p-3.5 rounded-xl border cursor-pointer transition-all ${
                     isSelected 
-                      ? 'bg-[#F0EDE4]/60 border-[#004741] shadow-sm ring-1 ring-[#004741]' 
-                      : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-[#F0EDE4]/30'
+                      ? 'bg-[#EEEAE1]/60 border-[#6D86A1] shadow-sm ring-1 ring-[#6D86A1]' 
+                      : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-[#EEEAE1]/30'
                   }`}
                 >
                   <div className="flex items-center justify-between">
@@ -107,7 +107,7 @@ export const ExplainabilityTab: React.FC<ExplainabilityTabProps> = ({
                       <p className="text-[11px] text-slate-500">{cand.jobTitle}</p>
                     </div>
                     <div className="text-right">
-                      <span className="text-base font-black text-[#004741]">{cand.overallScore}</span>
+                      <span className="text-base font-black text-[#3E5062]">{cand.overallScore}</span>
                       <span className="text-[10px] text-slate-400 block font-semibold">/100 PTS</span>
                     </div>
                   </div>
@@ -146,7 +146,7 @@ export const ExplainabilityTab: React.FC<ExplainabilityTabProps> = ({
 
                 <div className="text-right">
                   <div className="flex items-baseline gap-1 justify-end">
-                    <span className="text-3xl font-black text-[#004741]">{selectedCandidate.overallScore}</span>
+                    <span className="text-3xl font-black text-[#3E5062]">{selectedCandidate.overallScore}</span>
                     <span className="text-xs font-bold text-slate-400">/ 100</span>
                   </div>
                   <span className="text-xs font-semibold text-emerald-600 block">
@@ -158,10 +158,10 @@ export const ExplainabilityTab: React.FC<ExplainabilityTabProps> = ({
               {/* Natural Language Decision Summary */}
               <div>
                 <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                  <BrainCircuit className="w-4 h-4 text-[#004741]" />
+                  <BrainCircuit className="w-4 h-4 text-[#6D86A1]" />
                   Algorithmic Rationale & Explainability Summary
                 </h4>
-                <div className="p-4 rounded-xl bg-[#004741] text-[#F0EDE4] text-xs leading-relaxed border border-[#003530] font-mono shadow-inner">
+                <div className="p-4 rounded-xl bg-[#3E5062] text-[#EEEAE1] text-xs leading-relaxed border border-[#2E3D4C] font-mono shadow-inner">
                   {selectedCandidate.explainability.summary}
                 </div>
               </div>
@@ -261,7 +261,7 @@ export const ExplainabilityTab: React.FC<ExplainabilityTabProps> = ({
                   <div>
                     <button
                       onClick={handleSaveAdjustment}
-                      className="w-full py-2.5 px-3 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded-lg text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5"
+                      className="w-full py-2.5 px-3 bg-[#6D86A1] hover:bg-[#5C748D] text-[#EEEAE1] rounded-lg text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5"
                     >
                       <CheckCircle2 className="w-3.5 h-3.5" />
                       <span>{isSaved ? 'Override Logged!' : 'Commit Override'}</span>

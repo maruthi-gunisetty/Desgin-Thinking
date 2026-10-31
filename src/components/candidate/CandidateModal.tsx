@@ -63,24 +63,24 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex justify-center items-start p-4 md:p-6 animate-fadeIn">
       <div className="bg-white w-full max-w-4xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden my-auto max-h-[92vh] flex flex-col">
         {/* Header Bar */}
-        <div className="px-6 py-5 bg-[#004741] text-white flex items-center justify-between border-b border-[#003833]">
+        <div className="px-6 py-5 bg-[#3E5062] text-white flex items-center justify-between border-b border-[#2E3D4C]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#F0EDE4] flex items-center justify-center font-bold text-[#004741] shadow-inner text-base">
+            <div className="w-10 h-10 rounded-xl bg-[#EEEAE1] flex items-center justify-center font-bold text-[#3E5062] shadow-inner text-base">
               {isAnonymized ? '#' : displayName.charAt(0)}
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-bold text-white">{displayName}</h2>
-                <span className="text-xs px-2 py-0.5 rounded font-mono bg-[#003530] text-slate-200 border border-[#002723]">
+                <span className="text-xs px-2 py-0.5 rounded font-mono bg-[#2E3D4C] text-slate-200 border border-[#1E293B]">
                   {candidate.id}
                 </span>
                 {isAnonymized && (
-                  <span className="text-[10px] bg-[#F0EDE4]/20 text-[#F0EDE4] border border-[#F0EDE4]/40 px-2 py-0.5 rounded-full font-bold">
+                  <span className="text-[10px] bg-[#EEEAE1]/20 text-[#EEEAE1] border border-[#EEEAE1]/40 px-2 py-0.5 rounded-full font-bold">
                     Blind Review Active
                   </span>
                 )}
               </div>
-              <p className="text-xs text-[#E5DFD3] mt-0.5">
+              <p className="text-xs text-[#EEEAE1]/80 mt-0.5">
                 Applied for <span className="text-white font-semibold">{candidate.jobTitle}</span> &bull; {candidate.department}
               </p>
             </div>
@@ -91,7 +91,7 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
             <select
               value={candidate.status}
               onChange={(e) => onUpdateStatus(candidate.id, e.target.value as ScreeningStatus)}
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#003530] text-[#F0EDE4] border border-[#002723] focus:outline-none focus:ring-2 focus:ring-[#004741]"
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#2E3D4C] text-[#EEEAE1] border border-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#6D86A1]"
             >
               <option value="Shortlisted">Status: Shortlisted</option>
               <option value="Under Review">Status: Under Review</option>
@@ -368,12 +368,12 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
           </div>
 
           {/* Human-in-the-Loop Recruiter Override */}
-          <div className="p-4 rounded-xl bg-[#004741]/5 border border-[#004741]/20">
-            <h3 className="text-xs font-bold text-[#004741] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-              <Sliders className="w-3.5 h-3.5 text-[#004741]" />
+          <div className="p-4 rounded-xl bg-[#6D86A1]/10 border border-[#6D86A1]/30">
+            <h3 className="text-xs font-bold text-[#3E5062] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <Sliders className="w-3.5 h-3.5 text-[#6D86A1]" />
               Human-in-the-Loop Recruiter Override & Notes
             </h3>
-            <p className="text-xs text-[#004741]/85 mb-3">
+            <p className="text-xs text-slate-600 mb-3">
               Recruiters may adjust the objective score with a mandatory compliance rationale. All adjustments are logged to the immutable audit trail.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-3 items-end">
@@ -402,7 +402,7 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
               <div>
                 <button
                   onClick={handleSaveAdjustment}
-                  className="w-full py-2 px-3 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded text-xs font-semibold transition-colors flex items-center justify-center gap-1"
+                  className="w-full py-2 px-3 bg-[#6D86A1] hover:bg-[#5C748D] text-[#EEEAE1] rounded text-xs font-semibold transition-colors flex items-center justify-center gap-1"
                 >
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   {isSaved ? 'Saved to Audit!' : 'Save Override'}
@@ -426,7 +426,7 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
             </button>
             <button
               onClick={() => onUpdateStatus(candidate.id, 'Under Review')}
-              className="px-4 py-2 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded-lg text-xs font-semibold shadow-sm transition-colors"
+              className="px-4 py-2 bg-[#6D86A1] hover:bg-[#5C748D] text-[#EEEAE1] rounded-lg text-xs font-semibold shadow-sm transition-colors"
             >
               Mark Under Review
             </button>

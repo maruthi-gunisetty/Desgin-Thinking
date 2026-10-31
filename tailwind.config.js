@@ -10,87 +10,85 @@ export default {
         linen: {
           50: '#FDFCFB',
           100: '#FAF8F5',
-          200: '#F5F2EB',
-          300: '#F0EDE4', // Main Theme Color #F0EDE4
-          400: '#E4DFD3',
-          500: '#D5CDBF',
-          600: '#B8AD9C',
-          700: '#958874',
-          800: '#6C6253',
-          900: '#474035',
+          200: '#F5F2EC',
+          300: '#EEEAE1', // Main Theme Color #EEEAE1
+          400: '#E2DDD2',
+          500: '#D5CFC2',
+          600: '#B8B0A0',
+          700: '#958C7B',
+          800: '#6C6556',
+          900: '#474237',
+        },
+        steelBlue: {
+          50: '#F0F4F8',
+          100: '#DEE6ED',
+          200: '#BDCDDC',
+          300: '#9CB3CB',
+          400: '#849EBA',
+          500: '#6D86A1', // Theme Accent Combo #6D86A1
+          600: '#5C748D',
+          700: '#4D6277',
+          800: '#3E5062',
+          900: '#2E3D4C',
+          950: '#1D2732',
         },
         forestTeal: {
-          50: '#E6F2F1',
-          100: '#CCE5E3',
-          200: '#99CBC7',
-          300: '#66B1AB',
-          400: '#33978F',
-          500: '#007D73',
-          600: '#00665E',
-          700: '#00544D',
-          800: '#004741', // Theme Accent Combo #004741
-          900: '#003530',
-          950: '#002421',
+          500: '#6D86A1',
+          800: '#4D6277',
+          900: '#3E5062',
         },
         teal: {
-          50: '#E6F2F1',
-          100: '#CCE5E3',
-          200: '#99CBC7',
-          300: '#66B1AB',
-          400: '#33978F',
-          500: '#007D73',
-          600: '#00665E',
-          700: '#00544D',
-          800: '#004741',
-          900: '#003530',
+          500: '#6D86A1',
+          700: '#4D6277',
+          800: '#3E5062',
         },
         coral: {
-          400: '#004741',
-          500: '#003530',
+          400: '#6D86A1',
+          500: '#5C748D',
         },
         slateNavy: {
-          800: '#004741',
-          900: '#003530',
+          800: '#3E5062',
+          900: '#2E3D4C',
         },
         brand: {
-          linen: '#F0EDE4',
-          teal: '#004741',
-          dark: '#003530',
-          hover: '#003833',
+          linen: '#EEEAE1',
+          teal: '#6D86A1',
+          dark: '#3E5062',
+          hover: '#5C748D',
           light: '#FAF8F5',
-          coral: '#004741',
-          navy: '#004741',
-          blue: '#004741',
+          coral: '#6D86A1',
+          navy: '#3E5062',
+          blue: '#6D86A1',
         },
         primary: {
-          DEFAULT: '#004741',
-          hover: '#003530',
-          light: '#E6F2F1',
-          dark: '#002421',
+          DEFAULT: '#6D86A1',
+          hover: '#5C748D',
+          light: '#F0F4F8',
+          dark: '#3E5062',
         },
         secondary: {
-          DEFAULT: '#F0EDE4',
-          hover: '#E4DFD3',
+          DEFAULT: '#EEEAE1',
+          hover: '#E2DDD2',
           light: '#FAF8F5',
-          dark: '#D5CDBF',
+          dark: '#D5CFC2',
         },
         surface: {
-          bg: '#F0EDE4', // Background Linen #F0EDE4
+          bg: '#EEEAE1', // Background Linen #EEEAE1
           card: '#FFFFFF', // Cards White
           subtle: '#FAF8F5',
-          border: '#E4DFD3',
-          hover: '#EBE7DC',
+          border: '#DDD7CA',
+          hover: '#E8E3D8',
         },
         content: {
-          main: '#192423', // Deep Forest Charcoal
-          secondary: '#4D5E5C', // Muted Slate Forest
-          muted: '#80918F',
+          main: '#1E293B', // Deep Slate
+          secondary: '#475569', // Muted Slate
+          muted: '#8595A6',
         },
         status: {
-          success: '#00665E', // Forest Green
+          success: '#2E7D5B', // Emerald
           warning: '#B87A14', // Amber
           danger: '#C53B3B', // Crimson
-          info: '#004741', // Theme Teal
+          info: '#6D86A1', // Theme Steel Blue
         }
       },
       fontFamily: {

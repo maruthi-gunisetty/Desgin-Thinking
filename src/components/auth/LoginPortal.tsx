@@ -99,38 +99,38 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#002B27] flex flex-col justify-center items-center p-4 md:p-8 selection:bg-[#004741] selection:text-[#F0EDE4]">
+    <div className="min-h-screen bg-[#1E293B] flex flex-col justify-center items-center p-4 md:p-8 selection:bg-[#6D86A1] selection:text-[#EEEAE1]">
       {/* Background ambient lighting */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#F0EDE4]/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#004741]/40 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#EEEAE1]/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#6D86A1]/40 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-5xl bg-white rounded-3xl shadow-2xl border border-[#00544D]/40 overflow-hidden grid grid-cols-1 lg:grid-cols-12 animate-fadeIn">
+      <div className="relative z-10 w-full max-w-5xl bg-white rounded-3xl shadow-2xl border border-[#6D86A1]/30 overflow-hidden grid grid-cols-1 lg:grid-cols-12 animate-fadeIn">
         {/* Left Showcase Panel (5 cols) */}
-        <div className="lg:col-span-5 bg-gradient-to-br from-[#004741] via-[#003833] to-[#002421] text-white p-8 md:p-10 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#003530] relative">
+        <div className="lg:col-span-5 bg-gradient-to-br from-[#4D6277] via-[#3E5062] to-[#2E3D4C] text-white p-8 md:p-10 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#2E3D4C] relative">
           <div className="space-y-6">
             {/* Brand Logo */}
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#F0EDE4] flex items-center justify-center text-[#004741] shadow-lg shadow-black/20">
-                <ShieldCheck className="w-6 h-6 text-[#004741] stroke-[2.5]" />
+              <div className="w-10 h-10 rounded-xl bg-[#EEEAE1] flex items-center justify-center text-[#3E5062] shadow-lg shadow-black/20">
+                <ShieldCheck className="w-6 h-6 text-[#3E5062] stroke-[2.5]" />
               </div>
               <div>
                 <h1 className="font-bold text-xl text-white tracking-tight">FairHire AI</h1>
-                <p className="text-[11px] text-[#F0EDE4] font-semibold opacity-90">Bias-Aware Talent Intelligence</p>
+                <p className="text-[11px] text-[#BDCDDC] font-semibold opacity-90">Bias-Aware Talent Intelligence</p>
               </div>
             </div>
 
             {/* Value Proposition */}
             <div className="space-y-2 pt-2">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#F0EDE4]/15 border border-[#F0EDE4]/30 text-[#F0EDE4] text-[11px] font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#F0EDE4]" />
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EEEAE1]/15 border border-[#EEEAE1]/30 text-[#EEEAE1] text-[11px] font-semibold">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#EEEAE1]" />
                 <span>EEOC & EU AI Act Audited</span>
               </div>
               <h2 className="text-xl md:text-2xl font-extrabold leading-snug tracking-tight text-slate-100">
                 Pure Merit-Based Resume Screening for Enterprises
               </h2>
-              <p className="text-xs text-teal-100/90 leading-relaxed">
+              <p className="text-xs text-[#BDCDDC] leading-relaxed">
                 Quarantine demographic factors from candidate ranking algorithms. Ensure Title VII Four-Fifths compliance and transparent explainability in every hiring decision.
               </p>
             </div>
@@ -138,20 +138,20 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
             {/* Core Ethical Guarantees */}
             <div className="space-y-3 pt-2 text-xs">
               <div className="flex items-center gap-2.5 text-slate-200">
-                <div className="w-5 h-5 rounded-md bg-[#F0EDE4]/20 border border-[#F0EDE4]/30 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#F0EDE4]" />
+                <div className="w-5 h-5 rounded-md bg-[#EEEAE1]/20 border border-[#EEEAE1]/30 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#EEEAE1]" />
                 </div>
                 <span>Automated PII & Pedigree Redaction</span>
               </div>
               <div className="flex items-center gap-2.5 text-slate-200">
-                <div className="w-5 h-5 rounded-md bg-[#F0EDE4]/20 border border-[#F0EDE4]/30 flex items-center justify-center flex-shrink-0">
-                  <Scale className="w-3.5 h-3.5 text-[#F0EDE4]" />
+                <div className="w-5 h-5 rounded-md bg-[#EEEAE1]/20 border border-[#EEEAE1]/30 flex items-center justify-center flex-shrink-0">
+                  <Scale className="w-3.5 h-3.5 text-[#EEEAE1]" />
                 </div>
                 <span>Continuous 80% Four-Fifths Parity Audits</span>
               </div>
               <div className="flex items-center gap-2.5 text-slate-200">
-                <div className="w-5 h-5 rounded-md bg-[#F0EDE4]/20 border border-[#F0EDE4]/30 flex items-center justify-center flex-shrink-0">
-                  <FileCheck className="w-3.5 h-3.5 text-[#F0EDE4]" />
+                <div className="w-5 h-5 rounded-md bg-[#EEEAE1]/20 border border-[#EEEAE1]/30 flex items-center justify-center flex-shrink-0">
+                  <FileCheck className="w-3.5 h-3.5 text-[#EEEAE1]" />
                 </div>
                 <span>Immutable Cryptographic Audit Trail</span>
               </div>
@@ -159,9 +159,9 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
           </div>
 
           {/* Bottom Trust Badge */}
-          <div className="pt-8 border-t border-[#00544D] mt-8 text-[11px] text-teal-200 flex items-center justify-between">
+          <div className="pt-8 border-t border-[#4D6277] mt-8 text-[11px] text-[#BDCDDC] flex items-center justify-between">
             <span>SOC 2 Type II Certified</span>
-            <span className="font-mono text-[#F0EDE4]">TLS 1.3 / AES-256</span>
+            <span className="font-mono text-[#EEEAE1]">TLS 1.3 / AES-256</span>
           </div>
         </div>
 
@@ -171,13 +171,13 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
             {/* Header */}
             <div className="flex items-center justify-between pb-6 border-b border-slate-100 mb-6">
               <div>
-                <h3 className="text-xl font-bold text-[#004741] tracking-tight">Enterprise Login Portal</h3>
+                <h3 className="text-xl font-bold text-[#3E5062] tracking-tight">Enterprise Login Portal</h3>
                 <p className="text-xs text-slate-500 mt-0.5">Authenticate to access blind screening & audit tools</p>
               </div>
 
               {/* Organization Pill */}
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F0EDE4] border border-[#D5CDBF] text-[#004741] text-xs font-semibold">
-                <Building2 className="w-3.5 h-3.5 text-[#004741]" />
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#EEEAE1] border border-[#DDD7CA] text-[#3E5062] text-xs font-semibold">
+                <Building2 className="w-3.5 h-3.5 text-[#3E5062]" />
                 <span>Acme Global</span>
               </div>
             </div>
@@ -193,13 +193,13 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
             <form onSubmit={handleSubmit} className="space-y-4 text-xs">
               {/* Organization Selector */}
               <div>
-                <label className="font-bold text-[#004741] uppercase tracking-wider text-[11px] block mb-1">
+                <label className="font-bold text-[#3E5062] uppercase tracking-wider text-[11px] block mb-1">
                   Tenant Organization
                 </label>
                 <select
                   value={selectedOrg}
                   onChange={(e) => setSelectedOrg(e.target.value)}
-                  className="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-[#004741] text-xs"
+                  className="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-[#6D86A1] text-xs"
                 >
                   <option value="Acme Global Enterprise">Acme Global Enterprise (Verified Enterprise)</option>
                   <option value="Meridian Health Networks">Meridian Health Networks</option>
@@ -209,7 +209,7 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
 
               {/* Work Email */}
               <div>
-                <label className="font-bold text-[#004741] uppercase tracking-wider text-[11px] block mb-1">
+                <label className="font-bold text-[#3E5062] uppercase tracking-wider text-[11px] block mb-1">
                   Authorized Work Email
                 </label>
                 <div className="relative">
@@ -220,7 +220,7 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@enterprise-network.org"
-                    className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#004741] text-xs"
+                    className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#6D86A1] text-xs"
                   />
                 </div>
               </div>
@@ -228,13 +228,13 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
               {/* Password */}
               <div>
                 <div className="flex justify-between items-center mb-1">
-                  <label className="font-bold text-[#004741] uppercase tracking-wider text-[11px]">
+                  <label className="font-bold text-[#3E5062] uppercase tracking-wider text-[11px]">
                     Security Password
                   </label>
                   <button
                     type="button"
                     onClick={() => alert('Password reset verification email dispatched to enterprise inbox.')}
-                    className="text-[11px] text-[#004741] hover:underline font-medium"
+                    className="text-[11px] text-[#6D86A1] hover:underline font-medium"
                   >
                     Forgot password?
                   </button>
@@ -246,7 +246,7 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-9 pr-10 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#004741] text-xs font-mono"
+                    className="w-full pl-9 pr-10 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#6D86A1] text-xs font-mono"
                   />
                   <button
                     type="button"
@@ -265,7 +265,7 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
                     type="checkbox"
                     checked={rememberMe}
                     onChange={(e) => setRememberMe(e.target.checked)}
-                    className="w-4 h-4 text-[#004741] rounded border-slate-300 accent-[#004741]"
+                    className="w-4 h-4 text-[#6D86A1] rounded border-slate-300 accent-[#6D86A1]"
                   />
                   <span>Remember this workstation for 30 days</span>
                 </label>
@@ -275,11 +275,11 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-3 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded-xl font-extrabold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 text-xs"
+                className="w-full py-3 bg-[#6D86A1] hover:bg-[#5C748D] text-[#EEEAE1] rounded-xl font-extrabold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 text-xs"
               >
                 {isLoading ? (
                   <>
-                    <Sparkles className="w-4 h-4 animate-spin text-[#F0EDE4]" />
+                    <Sparkles className="w-4 h-4 animate-spin text-[#EEEAE1]" />
                     <span>Verifying Credentials & Audit Ledger...</span>
                   </>
                 ) : (
@@ -297,7 +297,7 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
                 <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                   Instant Demo Access (1-Click Login)
                 </span>
-                <span className="text-[10px] text-[#004741] font-semibold bg-[#F0EDE4] px-2 py-0.5 rounded border border-[#D5CDBF]">
+                <span className="text-[10px] text-[#3E5062] font-semibold bg-[#EEEAE1] px-2 py-0.5 rounded border border-[#DDD7CA]">
                   Evaluation Mode
                 </span>
               </div>
@@ -308,13 +308,13 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({ onLogin }) => {
                     key={user.id}
                     type="button"
                     onClick={() => handleQuickDemoLogin(user)}
-                    className="p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-[#F0EDE4]/60 hover:border-[#004741] text-left transition-all group"
+                    className="p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-[#EEEAE1]/60 hover:border-[#6D86A1] text-left transition-all group"
                   >
                     <div className="flex items-center gap-2 mb-1">
-                      <div className="w-6 h-6 rounded-md bg-[#004741] text-[#F0EDE4] flex items-center justify-center font-bold text-[10px] group-hover:scale-105 transition-transform">
+                      <div className="w-6 h-6 rounded-md bg-[#6D86A1] text-[#EEEAE1] flex items-center justify-center font-bold text-[10px] group-hover:scale-105 transition-transform">
                         {user.avatarInitials}
                       </div>
-                      <span className="font-bold text-[#004741] text-[11px] truncate">{user.name}</span>
+                      <span className="font-bold text-[#3E5062] text-[11px] truncate">{user.name}</span>
                     </div>
                     <p className="text-[10px] text-slate-500 line-clamp-1">{user.role.split(' ')[0]} {user.role.split(' ')[1]}</p>
                   </button>

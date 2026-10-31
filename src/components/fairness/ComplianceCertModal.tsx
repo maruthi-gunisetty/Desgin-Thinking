@@ -16,15 +16,15 @@ export const ComplianceCertModal: React.FC<ComplianceCertModalProps> = ({ summar
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/70 backdrop-blur-sm flex justify-center items-center p-4">
       <div className="bg-white w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-300 overflow-hidden flex flex-col">
         {/* Actions bar - hidden during print */}
-        <div className="px-6 py-3 bg-[#004741] text-white flex items-center justify-between no-print border-b border-[#003833]">
-          <span className="text-xs font-semibold text-[#F0EDE4] flex items-center gap-1.5">
-            <FileText className="w-4 h-4 text-[#F0EDE4]" />
+        <div className="px-6 py-3 bg-[#3E5062] text-white flex items-center justify-between no-print border-b border-[#2E3D4C]">
+          <span className="text-xs font-semibold text-[#EEEAE1] flex items-center gap-1.5">
+            <FileText className="w-4 h-4 text-[#EEEAE1]" />
             Official Compliance Certificate
           </span>
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-[#F0EDE4] hover:bg-[#E2DDD0] text-[#004741] shadow-sm transition-colors"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-[#EEEAE1] hover:bg-[#E2DDD2] text-[#3E5062] shadow-sm transition-colors"
             >
               <Printer className="w-3.5 h-3.5" />
               Print / Save PDF
@@ -42,12 +42,12 @@ export const ComplianceCertModal: React.FC<ComplianceCertModalProps> = ({ summar
         <div className="p-8 md:p-12 bg-white text-slate-900 border-8 border-double border-slate-200 m-4 rounded-xl relative">
           {/* Watermark badge */}
           <div className="absolute right-8 bottom-8 opacity-10 pointer-events-none">
-            <ShieldCheck className="w-48 h-48 text-[#004741]" />
+            <ShieldCheck className="w-48 h-48 text-[#6D86A1]" />
           </div>
 
           {/* Certificate Header */}
           <div className="text-center pb-6 border-b-2 border-slate-800">
-            <div className="inline-flex p-3 rounded-2xl bg-[#004741]/10 border border-[#004741]/30 text-[#004741] mb-2">
+            <div className="inline-flex p-3 rounded-2xl bg-[#6D86A1]/15 border border-[#6D86A1]/30 text-[#3E5062] mb-2">
               <ShieldCheck className="w-8 h-8" />
             </div>
             <h1 className="text-2xl font-serif font-black tracking-tight uppercase text-slate-900">
