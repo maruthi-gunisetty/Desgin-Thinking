@@ -4,15 +4,15 @@
 
 :root {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  color: #202939;
-  background-color: #F5F7FA;
+  color: #192423;
+  background-color: #F0EDE4;
 }
 
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #F5F7FA;
+  background-color: #F0EDE4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,24 +24,24 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #EBE7DC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #C9C2B2;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #004741;
 }
 
 /* Strict Enterprise Styling - Zero playful elements, clear metrics */
 .stat-card {
   background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+  border: 1px solid #E4DFD3;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 71, 65, 0.04);
 }
 
 .enterprise-badge {

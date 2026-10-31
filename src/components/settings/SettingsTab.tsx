@@ -68,7 +68,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <Settings className="w-5 h-5 text-[#384358]" />
+            <Settings className="w-5 h-5 text-[#004741]" />
             <h2 className="text-lg font-bold text-slate-900">
               System Governance, Compliance Policies & Audit Trail
             </h2>
@@ -80,9 +80,9 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
 
         <button
           onClick={handleExportCSV}
-          className="flex items-center gap-1.5 px-4 py-2 bg-[#384358] hover:bg-[#2A3343] text-white rounded-xl text-xs font-semibold shadow-sm transition-colors"
+          className="flex items-center gap-1.5 px-4 py-2 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded-xl text-xs font-semibold shadow-sm transition-colors"
         >
-          <Download className="w-4 h-4 text-[#FFA586]" />
+          <Download className="w-4 h-4 text-[#F0EDE4]" />
           <span>Export Audit Log (CSV)</span>
         </button>
       </div>
@@ -112,7 +112,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
               type="checkbox"
               checked={enforceFourFifthsAlert}
               onChange={(e) => setEnforceFourFifthsAlert(e.target.checked)}
-              className="w-4 h-4 text-[#FFA586] rounded mt-1 accent-[#FFA586] cursor-pointer"
+              className="w-4 h-4 text-[#004741] rounded mt-1 accent-[#004741] cursor-pointer"
             />
           </div>
 
@@ -128,7 +128,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
               type="checkbox"
               checked={isAnonymized}
               onChange={(e) => setIsAnonymized(e.target.checked)}
-              className="w-4 h-4 text-[#FFA586] rounded mt-1 accent-[#FFA586] cursor-pointer"
+              className="w-4 h-4 text-[#004741] rounded mt-1 accent-[#004741] cursor-pointer"
             />
           </div>
 
@@ -144,7 +144,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
               type="checkbox"
               checked={maskCollegePedigree}
               onChange={(e) => setMaskCollegePedigree(e.target.checked)}
-              className="w-4 h-4 text-[#FFA586] rounded mt-1 accent-[#FFA586] cursor-pointer"
+              className="w-4 h-4 text-[#004741] rounded mt-1 accent-[#004741] cursor-pointer"
             />
           </div>
 
@@ -160,31 +160,31 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
               type="checkbox"
               checked={requireOverrideNotes}
               onChange={(e) => setRequireOverrideNotes(e.target.checked)}
-              className="w-4 h-4 text-[#FFA586] rounded mt-1 accent-[#FFA586] cursor-pointer"
+              className="w-4 h-4 text-[#004741] rounded mt-1 accent-[#004741] cursor-pointer"
             />
           </div>
         </div>
       </div>
 
       {/* Regulatory Framework Attestation */}
-      <div className="p-5 rounded-2xl bg-[#384358] text-white space-y-4">
-        <div className="flex items-center justify-between pb-3 border-b border-slate-700/60">
+      <div className="p-5 rounded-2xl bg-[#004741] text-white space-y-4">
+        <div className="flex items-center justify-between pb-3 border-b border-[#003833]">
           <div className="flex items-center gap-2">
-            <Lock className="w-4 h-4 text-[#FFA586]" />
+            <Lock className="w-4 h-4 text-[#F0EDE4]" />
             <h3 className="font-bold text-xs uppercase tracking-wider text-slate-200">
               Regulatory Framework Compliance Attestations
             </h3>
           </div>
           <button
             onClick={onOpenComplianceCert}
-            className="text-xs text-[#FFA586] hover:text-[#ffbfa9] font-semibold transition-colors"
+            className="text-xs text-[#F0EDE4] hover:underline font-semibold transition-colors"
           >
             Inspect Formal Certificate &rarr;
           </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-          <div className="p-3.5 rounded-xl bg-[#2A3343] border border-slate-700/50 space-y-1">
+          <div className="p-3.5 rounded-xl bg-[#003530] border border-[#002723] space-y-1">
             <span className="text-[10px] uppercase font-bold text-emerald-400 block">EEOC / Title VII 1964</span>
             <span className="font-semibold text-slate-200">Uniform Guidelines Passed</span>
             <p className="text-[11px] text-slate-300 leading-normal">
@@ -192,15 +192,15 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-[#2A3343] border border-slate-700/50 space-y-1">
-            <span className="text-[10px] uppercase font-bold text-[#FFA586] block">EU AI Act (High-Risk III)</span>
+          <div className="p-3.5 rounded-xl bg-[#003530] border border-[#002723] space-y-1">
+            <span className="text-[10px] uppercase font-bold text-[#F0EDE4] block">EU AI Act (High-Risk III)</span>
             <span className="font-semibold text-slate-200">Conformity Assessment Ready</span>
             <p className="text-[11px] text-slate-300 leading-normal">
               Full algorithmic transparency, explainability feature attributions, and human oversight controls.
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-[#2A3343] border border-slate-700/50 space-y-1">
+          <div className="p-3.5 rounded-xl bg-[#003530] border border-[#002723] space-y-1">
             <span className="text-[10px] uppercase font-bold text-amber-400 block">NYC Local Law 144</span>
             <span className="font-semibold text-slate-200">Independent Bias Audit Passed</span>
             <p className="text-[11px] text-slate-300 leading-normal">
@@ -223,7 +223,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
             <select
               value={logFilter}
               onChange={(e) => setLogFilter(e.target.value)}
-              className="text-xs p-1.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 font-medium focus:ring-[#FFA586]"
+              className="text-xs p-1.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 font-medium focus:ring-[#004741]"
             >
               <option value="ALL">All Actions</option>
               <option value="Override">Overrides</option>
@@ -254,7 +254,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
                   <td className="py-3 px-4 text-slate-600 font-sans">{log.timestamp}</td>
                   <td className="py-3 px-4 font-sans font-medium text-slate-900">{log.user}</td>
                   <td className="py-3 px-4">
-                    <span className="font-sans font-semibold px-2 py-0.5 rounded bg-[#FFA586]/20 text-[#384358] border border-[#FFA586]/40 text-[10px]">
+                    <span className="font-sans font-semibold px-2 py-0.5 rounded bg-[#F0EDE4] text-[#004741] border border-[#D5CDBF] text-[10px]">
                       {log.action}
                     </span>
                   </td>

@@ -97,7 +97,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
       <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <Users className="w-5 h-5 text-[#384358]" />
+            <Users className="w-5 h-5 text-[#004741]" />
             <h2 className="text-lg font-bold text-slate-900">
               Candidate Pool ({filteredCandidates.length} of {candidates.length} Shown)
             </h2>
@@ -112,9 +112,9 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
           {selectedCandidateIds.length > 0 && (
             <button
               onClick={handleLaunchCompare}
-              className="flex items-center gap-1.5 px-3 py-2 bg-[#384358] hover:bg-[#2A3343] text-white rounded-lg text-xs font-semibold shadow-sm transition-colors"
+              className="flex items-center gap-1.5 px-3 py-2 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded-lg text-xs font-semibold shadow-sm transition-colors"
             >
-              <Award className="w-3.5 h-3.5 text-[#FFA586]" />
+              <Award className="w-3.5 h-3.5 text-[#F0EDE4]" />
               <span>Compare Selected ({selectedCandidateIds.length})</span>
             </button>
           )}
@@ -123,13 +123,13 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
             onClick={() => setIsAnonymized(!isAnonymized)}
             className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium border transition-all ${
               isAnonymized 
-                ? 'bg-[#FFA586]/20 border-[#FFA586] text-[#384358] shadow-sm font-semibold' 
+                ? 'bg-[#004741] border-[#004741] text-[#F0EDE4] shadow-sm font-semibold' 
                 : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
             }`}
           >
             {isAnonymized ? (
               <>
-                <EyeOff className="w-4 h-4 text-[#384358]" />
+                <EyeOff className="w-4 h-4 text-[#F0EDE4]" />
                 <span>Blind Mode: <strong>ON</strong> (Names & Universities Masked)</span>
               </>
             ) : (
@@ -153,7 +153,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
               placeholder="Search candidate name, ID, skills..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FFA586] focus:border-[#FFA586] text-xs"
+              className="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#004741] focus:border-[#004741] text-xs"
             />
           </div>
 
@@ -162,7 +162,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
             <select
               value={selectedJobFilter}
               onChange={(e) => setSelectedJobFilter(e.target.value)}
-              className="w-full py-2 px-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FFA586] focus:border-[#FFA586] text-xs font-medium"
+              className="w-full py-2 px-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#004741] focus:border-[#004741] text-xs font-medium"
             >
               <option value="ALL">All Requisitions ({jobs.length})</option>
               {jobs.map((job) => (
@@ -178,7 +178,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
             <select
               value={selectedStatusFilter}
               onChange={(e) => setSelectedStatusFilter(e.target.value)}
-              className="w-full py-2 px-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FFA586] focus:border-[#FFA586] text-xs font-medium"
+              className="w-full py-2 px-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#004741] focus:border-[#004741] text-xs font-medium"
             >
               <option value="ALL">All Candidate Statuses</option>
               <option value="Shortlisted">Shortlisted</option>
@@ -192,7 +192,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
           <div className="flex flex-col justify-center px-1">
             <div className="flex justify-between text-[11px] text-slate-600 font-medium mb-1">
               <span>Min Score:</span>
-              <span className="font-bold text-[#384358]">{minScoreFilter} pts</span>
+              <span className="font-bold text-[#004741]">{minScoreFilter} pts</span>
             </div>
             <input
               type="range"
@@ -201,7 +201,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
               step="5"
               value={minScoreFilter}
               onChange={(e) => setMinScoreFilter(Number(e.target.value))}
-              className="accent-[#FFA586]"
+              className="accent-[#004741]"
             />
           </div>
         </div>
@@ -254,19 +254,19 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
                 return (
                   <tr 
                     key={cand.id}
-                    className={`hover:bg-[#FFF5F2]/50 transition-colors cursor-pointer ${
-                      isSelected ? 'bg-[#FFA586]/15' : ''
+                    className={`hover:bg-[#F0EDE4]/40 transition-colors cursor-pointer ${
+                      isSelected ? 'bg-[#F0EDE4]' : ''
                     }`}
                     onClick={() => onSelectCandidate(cand)}
                   >
                     <td className="py-3 px-3 text-center" onClick={(e) => e.stopPropagation()}>
                       <button
                         onClick={() => toggleSelectCandidate(cand.id)}
-                        className="text-slate-400 hover:text-[#FFA586]"
+                        className="text-slate-400 hover:text-[#004741]"
                         title="Select for comparison"
                       >
                         {isSelected ? (
-                          <CheckSquare className="w-4 h-4 text-[#384358]" />
+                          <CheckSquare className="w-4 h-4 text-[#004741]" />
                         ) : (
                           <Square className="w-4 h-4" />
                         )}
@@ -275,16 +275,16 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
 
                     <td className="py-3 px-3">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-[#384358]/10 text-[#384358] font-bold flex items-center justify-center text-xs">
+                        <div className="w-8 h-8 rounded-lg bg-[#004741]/10 text-[#004741] font-bold flex items-center justify-center text-xs">
                           {isAnonymized ? '#' : name.charAt(0)}
                         </div>
                         <div>
                           <div className="flex items-center gap-1.5">
-                            <span className="font-bold text-slate-900 hover:text-[#384358] transition-colors">
+                            <span className="font-bold text-slate-900 hover:text-[#004741] transition-colors">
                               {name}
                             </span>
                             {isAnonymized && (
-                              <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#FFA586]/20 text-[#384358] border border-[#FFA586]/40 font-semibold">
+                              <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#F0EDE4] text-[#004741] border border-[#D5CDBF] font-semibold">
                                 Masked
                               </span>
                             )}
@@ -303,7 +303,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
                     <td className="py-3 px-3">
                       <div className="flex items-baseline gap-1">
                         <span className={`text-base font-extrabold ${
-                          cand.overallScore >= 80 ? 'text-emerald-600' : cand.overallScore >= 65 ? 'text-[#384358]' : 'text-amber-600'
+                          cand.overallScore >= 80 ? 'text-emerald-600' : cand.overallScore >= 65 ? 'text-[#004741]' : 'text-amber-600'
                         }`}>
                           {cand.overallScore}
                         </span>
@@ -329,7 +329,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
                           cand.status === 'Shortlisted' 
                             ? 'bg-emerald-50 text-emerald-800 border-emerald-200' 
                             : cand.status === 'Under Review' 
-                              ? 'bg-[#FFA586]/20 text-[#384358] border-[#FFA586]/40' 
+                              ? 'bg-[#F0EDE4] text-[#004741] border-[#D5CDBF]' 
                               : 'bg-slate-100 text-slate-700 border-slate-200'
                         }`}
                       >
@@ -346,7 +346,7 @@ export const DatabaseTab: React.FC<DatabaseTabProps> = ({
                           e.stopPropagation();
                           onSelectCandidate(cand);
                         }}
-                        className="text-xs font-semibold text-[#384358] hover:text-[#FFA586] flex items-center gap-0.5 ml-auto transition-colors"
+                        className="text-xs font-semibold text-[#004741] hover:text-[#002B27] flex items-center gap-0.5 ml-auto transition-colors"
                       >
                         <span>Dossier</span>
                         <ChevronRight className="w-3.5 h-3.5" />

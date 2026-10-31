@@ -7,73 +7,90 @@ export default {
   theme: {
     extend: {
       colors: {
+        linen: {
+          50: '#FDFCFB',
+          100: '#FAF8F5',
+          200: '#F5F2EB',
+          300: '#F0EDE4', // Main Theme Color #F0EDE4
+          400: '#E4DFD3',
+          500: '#D5CDBF',
+          600: '#B8AD9C',
+          700: '#958874',
+          800: '#6C6253',
+          900: '#474035',
+        },
+        forestTeal: {
+          50: '#E6F2F1',
+          100: '#CCE5E3',
+          200: '#99CBC7',
+          300: '#66B1AB',
+          400: '#33978F',
+          500: '#007D73',
+          600: '#00665E',
+          700: '#00544D',
+          800: '#004741', // Theme Accent Combo #004741
+          900: '#003530',
+          950: '#002421',
+        },
+        teal: {
+          50: '#E6F2F1',
+          100: '#CCE5E3',
+          200: '#99CBC7',
+          300: '#66B1AB',
+          400: '#33978F',
+          500: '#007D73',
+          600: '#00665E',
+          700: '#00544D',
+          800: '#004741',
+          900: '#003530',
+        },
         coral: {
-          50: '#FFF5F2',
-          100: '#FFEAE3',
-          200: '#FFD4C5',
-          300: '#FFBCA6',
-          400: '#FFA586', // Main Theme Color #FFA586
-          500: '#F58B68',
-          600: '#E5734E',
-          700: '#C95733',
-          800: '#A74223',
-          900: '#87341B',
+          400: '#004741',
+          500: '#003530',
         },
         slateNavy: {
-          50: '#F2F5F9',
-          100: '#E6EBF3',
-          200: '#C9D3E4',
-          300: '#A4B2CD',
-          400: '#8091B3',
-          500: '#67789A',
-          600: '#556482',
-          700: '#46536C',
-          800: '#384358', // Main Theme Color #384358
-          900: '#2A3343',
-          950: '#1E2532',
-        },
-        navy: {
-          950: '#1E2532',
-          900: '#2A3343',
-          800: '#384358', // Main Theme Color #384358
-          700: '#46536C',
-          600: '#556482',
+          800: '#004741',
+          900: '#003530',
         },
         brand: {
-          coral: '#FFA586',
-          navy: '#384358',
-          hover: '#F58B68',
-          light: '#FFF5F2',
-          blue: '#FFA586', // legacy fallback mapped to coral
+          linen: '#F0EDE4',
+          teal: '#004741',
+          dark: '#003530',
+          hover: '#003833',
+          light: '#FAF8F5',
+          coral: '#004741',
+          navy: '#004741',
+          blue: '#004741',
         },
         primary: {
-          DEFAULT: '#FFA586',
-          hover: '#F58B68',
-          light: '#FFF5F2',
-          dark: '#E5734E',
+          DEFAULT: '#004741',
+          hover: '#003530',
+          light: '#E6F2F1',
+          dark: '#002421',
         },
         secondary: {
-          DEFAULT: '#384358',
-          hover: '#2A3343',
-          light: '#F2F5F9',
-          dark: '#1E2532',
+          DEFAULT: '#F0EDE4',
+          hover: '#E4DFD3',
+          light: '#FAF8F5',
+          dark: '#D5CDBF',
         },
         surface: {
-          bg: '#F5F7FA', // Background Light Grey
+          bg: '#F0EDE4', // Background Linen #F0EDE4
           card: '#FFFFFF', // Cards White
-          border: '#E2E8F0',
-          hover: '#F1F5F9',
+          subtle: '#FAF8F5',
+          border: '#E4DFD3',
+          hover: '#EBE7DC',
         },
         content: {
-          main: '#202939', // Main Text Dark Charcoal
-          secondary: '#667085', // Secondary Text Grey
-          muted: '#94A3B8',
+          main: '#192423', // Deep Forest Charcoal
+          secondary: '#4D5E5C', // Muted Slate Forest
+          muted: '#80918F',
         },
         status: {
-          success: '#198754', // Muted Green
-          warning: '#D99A22', // Amber
-          danger: '#DC5454', // Muted Red
-          info: '#FFA586', // Theme Coral
+          success: '#00665E', // Forest Green
+          warning: '#B87A14', // Amber
+          danger: '#C53B3B', // Crimson
+          info: '#004741', // Theme Teal
         }
       },
       fontFamily: {
@@ -81,9 +98,9 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
       },
       boxShadow: {
-        'card': '0 1px 3px 0 rgba(16, 24, 40, 0.05), 0 1px 2px 0 rgba(16, 24, 40, 0.02)',
-        'card-hover': '0 4px 6px -1px rgba(16, 24, 40, 0.08), 0 2px 4px -2px rgba(16, 24, 40, 0.04)',
-        'coral': '0 4px 14px 0 rgba(255, 165, 134, 0.35)',
+        'card': '0 1px 3px 0 rgba(0, 71, 65, 0.05), 0 1px 2px 0 rgba(0, 71, 65, 0.03)',
+        'card-hover': '0 6px 12px -2px rgba(0, 71, 65, 0.08), 0 3px 6px -2px rgba(0, 71, 65, 0.05)',
+        'teal': '0 4px 14px 0 rgba(0, 71, 65, 0.25)',
       }
     },
   },

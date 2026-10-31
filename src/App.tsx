@@ -225,7 +225,7 @@ export function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5F7FA] font-sans antialiased text-[#202939]">
+    <div className="min-h-screen bg-[#F0EDE4] font-sans antialiased text-[#192423]">
       {/* Fixed Left Navigation Sidebar */}
       <Sidebar
         activeTab={activeTab}

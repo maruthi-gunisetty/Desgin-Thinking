@@ -50,16 +50,16 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
   return (
     <div className="space-y-6 animate-fadeIn">
       {/* Top Welcome & Ethical AI Verification Hero Banner */}
-      <div className="bg-gradient-to-r from-[#384358] via-[#46536C] to-[#2A3343] text-white rounded-2xl p-6 md:p-8 shadow-md border border-slate-700/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="bg-gradient-to-r from-[#004741] via-[#00544D] to-[#003530] text-white rounded-2xl p-6 md:p-8 shadow-md border border-[#003530] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div className="space-y-2 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFA586]/20 border border-[#FFA586]/40 text-[#FFA586] text-xs font-semibold">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#FFA586]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F0EDE4]/15 border border-[#F0EDE4]/30 text-[#F0EDE4] text-xs font-semibold">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#F0EDE4]" />
             <span>EEOC & EU AI Act Audited &bull; 100% Merit-Based Algorithm</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
             FairHire AI Talent Intelligence Platform
           </h2>
-          <p className="text-slate-200 text-xs md:text-sm leading-relaxed">
+          <p className="text-teal-100/90 text-xs md:text-sm leading-relaxed">
             Eliminate demographic and pedigree bias in your recruitment funnel. Protected attributes (gender, ethnicity, age) are isolated strictly to post-hoc statistical compliance audits and never inform ranking models.
           </p>
         </div>
@@ -67,16 +67,16 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
         <div className="flex flex-wrap md:flex-col gap-2.5 w-full md:w-auto">
           <button
             onClick={() => setActiveTab('screening')}
-            className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 bg-[#FFA586] hover:bg-[#F58B68] text-[#2A3343] rounded-xl text-xs font-bold shadow-md transition-all"
+            className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 bg-[#F0EDE4] hover:bg-[#E4DFD3] text-[#004741] rounded-xl text-xs font-bold shadow-md transition-all"
           >
-            <FileSearch className="w-4 h-4 text-[#2A3343]" />
+            <FileSearch className="w-4 h-4 text-[#004741]" />
             <span>Screen New Resume</span>
           </button>
           <button
             onClick={onOpenAuditReport}
-            className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 bg-[#2A3343] hover:bg-[#384358] text-[#FFA586] border border-slate-600 rounded-xl text-xs font-bold transition-all shadow-sm"
+            className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 bg-[#003530] hover:bg-[#004741] text-[#F0EDE4] border border-[#00544D] rounded-xl text-xs font-bold transition-all shadow-sm"
           >
-            <Sparkles className="w-4 h-4 text-[#FFA586]" />
+            <Sparkles className="w-4 h-4 text-[#F0EDE4]" />
             <span>View Compliance Cert</span>
           </button>
         </div>
@@ -87,13 +87,13 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
         {/* KPI 1 */}
         <div className="stat-card p-5 hover:shadow-card-hover transition-shadow">
           <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#384358]">Total Evaluated</span>
-            <div className="p-2 rounded-lg bg-[#FFF5F2] text-[#E5734E]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#004741]">Total Evaluated</span>
+            <div className="p-2 rounded-lg bg-[#F0EDE4] text-[#004741]">
               <Users className="w-4 h-4" />
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold text-[#384358]">{totalCount}</span>
+            <span className="text-3xl font-extrabold text-[#004741]">{totalCount}</span>
             <span className="text-xs font-medium text-emerald-600 flex items-center">
               <ArrowUpRight className="w-3.5 h-3.5" /> 100% Parsed
             </span>
@@ -104,13 +104,13 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
         {/* KPI 2 */}
         <div className="stat-card p-5 hover:shadow-card-hover transition-shadow">
           <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#384358]">Shortlist Rate</span>
-            <div className="p-2 rounded-lg bg-[#FFF5F2] text-[#E5734E]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#004741]">Shortlist Rate</span>
+            <div className="p-2 rounded-lg bg-[#F0EDE4] text-[#004741]">
               <Award className="w-4 h-4" />
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold text-[#384358]">{shortlistRate}%</span>
+            <span className="text-3xl font-extrabold text-[#004741]">{shortlistRate}%</span>
             <span className="text-xs text-slate-500 font-medium">({shortlistedCount} candidates)</span>
           </div>
           <p className="text-[11px] text-slate-500 mt-2">Target threshold &ge; 80 merit score</p>
@@ -119,7 +119,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
         {/* KPI 3 */}
         <div className="stat-card p-5 hover:shadow-card-hover transition-shadow">
           <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#384358]">EEOC 4/5ths Metric</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#004741]">EEOC 4/5ths Metric</span>
             <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600">
               <ShieldCheck className="w-4 h-4" />
             </div>
@@ -136,13 +136,13 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
         {/* KPI 4 */}
         <div className="stat-card p-5 hover:shadow-card-hover transition-shadow">
           <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#384358]">Mean Merit Score</span>
-            <div className="p-2 rounded-lg bg-[#FFF5F2] text-[#E5734E]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#004741]">Mean Merit Score</span>
+            <div className="p-2 rounded-lg bg-[#F0EDE4] text-[#004741]">
               <TrendingUp className="w-4 h-4" />
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold text-[#384358]">{avgScore}</span>
+            <span className="text-3xl font-extrabold text-[#004741]">{avgScore}</span>
             <span className="text-xs text-slate-500">/ 100 pts</span>
           </div>
           <p className="text-[11px] text-slate-500 mt-2">Standard deviation: &plusmn; 8.4 pts</p>
@@ -156,12 +156,12 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
           <div>
             <div className="flex items-center justify-between pb-4 border-b border-slate-200">
               <div>
-                <h3 className="font-bold text-sm text-[#384358]">Top Ranked Candidates by Merit</h3>
+                <h3 className="font-bold text-sm text-[#004741]">Top Ranked Candidates by Merit</h3>
                 <p className="text-xs text-slate-500">Evaluated on skills (35%), experience (25%), projects (15%), certs (10%)</p>
               </div>
               <button
                 onClick={() => setActiveTab('ranking')}
-                className="text-xs font-bold text-[#E5734E] hover:text-[#C95733] flex items-center gap-1"
+                className="text-xs font-bold text-[#004741] hover:underline flex items-center gap-1"
               >
                 <span>Full Leaderboard</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -186,16 +186,16 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
                     return (
                       <tr 
                         key={cand.id} 
-                        className="hover:bg-[#FFF5F2]/40 transition-colors group cursor-pointer"
+                        className="hover:bg-[#F0EDE4]/40 transition-colors group cursor-pointer"
                         onClick={() => onSelectCandidate(cand)}
                       >
                         <td className="py-3 px-3">
                           <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-lg bg-[#384358] text-[#FFA586] font-bold flex items-center justify-center text-xs">
+                            <div className="w-7 h-7 rounded-lg bg-[#004741] text-[#F0EDE4] font-bold flex items-center justify-center text-xs">
                               {isAnonymized ? '#' : name.charAt(0)}
                             </div>
                             <div>
-                              <span className="font-bold text-slate-900 group-hover:text-[#E5734E] transition-colors">
+                              <span className="font-bold text-slate-900 group-hover:text-[#004741] transition-colors">
                                 {name}
                               </span>
                               <span className="text-[10px] text-slate-400 block font-mono">{cand.id}</span>
@@ -209,7 +209,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
                           {cand.experienceYears} yrs
                         </td>
                         <td className="py-3 px-3">
-                          <span className="font-extrabold text-[#384358] text-sm">
+                          <span className="font-extrabold text-[#004741] text-sm">
                             {cand.overallScore}
                           </span>
                           <span className="text-[10px] text-slate-400 font-medium"> /100</span>
@@ -219,7 +219,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
                             cand.status === 'Shortlisted' 
                               ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
                               : cand.status === 'Under Review'
-                                ? 'bg-[#FFF5F2] text-[#A74223] border border-[#FFD4C5]'
+                                ? 'bg-[#F0EDE4] text-[#004741] border border-[#D5CDBF]'
                                 : 'bg-slate-100 text-slate-700'
                           }`}>
                             {cand.status}
@@ -231,7 +231,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
                               e.stopPropagation();
                               onSelectCandidate(cand);
                             }}
-                            className="text-xs font-bold text-[#E5734E] hover:underline"
+                            className="text-xs font-bold text-[#004741] hover:underline"
                           >
                             Inspect
                           </button>
@@ -248,7 +248,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
             <span>Blind Screening: {isAnonymized ? 'Active (All PII hidden)' : 'Disabled'}</span>
             <button 
               onClick={() => setActiveTab('database')}
-              className="text-[#E5734E] font-bold hover:underline"
+              className="text-[#004741] font-bold hover:underline"
             >
               Browse all {totalCount} candidates &rarr;
             </button>
@@ -259,7 +259,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
         <div className="stat-card p-5 space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-slate-200">
             <div>
-              <h3 className="font-bold text-sm text-[#384358]">EEOC 4/5ths Parity Audit</h3>
+              <h3 className="font-bold text-sm text-[#004741]">EEOC 4/5ths Parity Audit</h3>
               <p className="text-xs text-slate-500">Post-hoc demographic parity check</p>
             </div>
             <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">
@@ -267,7 +267,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
             </span>
           </div>
 
-          <p className="text-xs text-slate-600 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <p className="text-xs text-slate-600 leading-relaxed bg-[#FAF8F5] p-3 rounded-lg border border-[#E4DFD3]">
             The EEOC Uniform Guidelines specify that any selection rate for a protected demographic less than <strong>80% (four-fifths)</strong> of the highest group creates prima facie adverse impact.
           </p>
 
@@ -282,7 +282,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
                 {/* 80% benchmark mark */}
                 <div className="absolute left-[80%] top-0 bottom-0 w-0.5 bg-rose-500 z-10" title="80% Threshold" />
                 <div 
-                  className="bg-[#FFA586] h-full rounded-full" 
+                  className="bg-[#004741] h-full rounded-full" 
                   style={{ width: `${Math.min(100, auditSummary.genderDisparateImpactRatio * 100)}%` }}
                 />
               </div>
@@ -297,7 +297,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
               <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden relative">
                 <div className="absolute left-[80%] top-0 bottom-0 w-0.5 bg-rose-500 z-10" title="80% Threshold" />
                 <div 
-                  className="bg-[#FFA586] h-full rounded-full" 
+                  className="bg-[#004741] h-full rounded-full" 
                   style={{ width: `${Math.min(100, auditSummary.ethnicityDisparateImpactRatio * 100)}%` }}
                 />
               </div>
@@ -312,7 +312,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
               <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden relative">
                 <div className="absolute left-[80%] top-0 bottom-0 w-0.5 bg-rose-500 z-10" title="80% Threshold" />
                 <div 
-                  className="bg-[#FFA586] h-full rounded-full" 
+                  className="bg-[#004741] h-full rounded-full" 
                   style={{ width: `${Math.min(100, auditSummary.ageDisparateImpactRatio * 100)}%` }}
                 />
               </div>
@@ -322,9 +322,9 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
           <div className="pt-3 border-t border-slate-100">
             <button
               onClick={() => setActiveTab('fairness')}
-              className="w-full py-2 bg-[#FFF5F2] hover:bg-[#FFEAE3] text-[#A74223] rounded-lg text-xs font-bold border border-[#FFD4C5] transition-colors flex items-center justify-center gap-1.5"
+              className="w-full py-2 bg-[#F0EDE4] hover:bg-[#E4DFD3] text-[#004741] rounded-lg text-xs font-bold border border-[#D5CDBF] transition-colors flex items-center justify-center gap-1.5"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-[#FFA586]" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[#004741]" />
               <span>Open Detailed Fairness Sandbox</span>
             </button>
           </div>
@@ -337,12 +337,12 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
         <div className="lg:col-span-2 stat-card p-5">
           <div className="flex items-center justify-between pb-3 border-b border-slate-200">
             <div>
-              <h3 className="font-bold text-sm text-[#384358]">Active Enterprise Openings</h3>
+              <h3 className="font-bold text-sm text-[#004741]">Active Enterprise Openings</h3>
               <p className="text-xs text-slate-500">Configured with customized scoring weights</p>
             </div>
             <button
               onClick={() => setActiveTab('jobs')}
-              className="text-xs font-bold text-[#E5734E] hover:underline"
+              className="text-xs font-bold text-[#004741] hover:underline"
             >
               Manage Roles &rarr;
             </button>
@@ -350,15 +350,15 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             {jobs.slice(0, 3).map((job) => (
-              <div key={job.id} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/60 flex flex-col justify-between">
+              <div key={job.id} className="p-3.5 rounded-xl border border-[#E4DFD3] bg-[#FAF8F5] flex flex-col justify-between">
                 <div>
                   <span className="text-[10px] font-mono font-semibold text-slate-400 block mb-1">{job.id}</span>
-                  <h4 className="text-xs font-bold text-slate-900 line-clamp-1">{job.title}</h4>
-                  <p className="text-[11px] text-slate-500 mt-0.5">{job.department}</p>
+                  <h4 className="text-xs font-bold text-[#192423] line-clamp-1">{job.title}</h4>
+                  <p className="text-[11px] text-[#4D5E5C] mt-0.5">{job.department}</p>
 
                   <div className="mt-3 flex flex-wrap gap-1">
                     {job.requiredSkills.slice(0, 3).map((sk, idx) => (
-                      <span key={idx} className="text-[9px] bg-white border border-slate-200 px-1.5 py-0.5 rounded text-slate-600 font-medium">
+                      <span key={idx} className="text-[9px] bg-white border border-[#E4DFD3] px-1.5 py-0.5 rounded text-[#004741] font-medium">
                         {sk}
                       </span>
                     ))}
@@ -368,7 +368,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
                   </div>
                 </div>
 
-                <div className="mt-3 pt-2.5 border-t border-slate-200 flex items-center justify-between text-[11px]">
+                <div className="mt-3 pt-2.5 border-t border-[#E4DFD3] flex items-center justify-between text-[11px]">
                   <span className="text-slate-500">{job.applicantCount} Applicants</span>
                   <span className="font-bold text-emerald-600">{job.shortlistedCount} Shortlisted</span>
                 </div>
@@ -382,12 +382,12 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
           <div>
             <div className="flex items-center justify-between pb-3 border-b border-slate-200">
               <div>
-                <h3 className="font-bold text-sm text-[#384358]">Compliance Audit Trail</h3>
+                <h3 className="font-bold text-sm text-[#004741]">Compliance Audit Trail</h3>
                 <p className="text-xs text-slate-500">Immutable ledger events</p>
               </div>
               <button
                 onClick={() => setActiveTab('settings')}
-                className="text-xs font-bold text-[#E5734E] hover:underline"
+                className="text-xs font-bold text-[#004741] hover:underline"
               >
                 All Logs
               </button>
@@ -395,9 +395,9 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
 
             <div className="space-y-3 mt-3">
               {auditLogs.slice(0, 3).map((log) => (
-                <div key={log.id} className="p-2.5 rounded-lg bg-slate-50 border border-slate-200 text-xs">
+                <div key={log.id} className="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#E4DFD3] text-xs">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="font-semibold text-slate-800 text-[11px]">{log.action}</span>
+                    <span className="font-semibold text-[#004741] text-[11px]">{log.action}</span>
                     <span className="text-[10px] text-slate-400 font-mono">{log.timestamp.split(' ')[1] || log.timestamp}</span>
                   </div>
                   <p className="text-slate-600 text-[11px] line-clamp-1">{log.details}</p>

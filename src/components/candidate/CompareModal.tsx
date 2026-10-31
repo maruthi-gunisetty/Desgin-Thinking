@@ -21,19 +21,19 @@ export const CompareModal: React.FC<CompareModalProps> = ({
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex justify-center items-center p-4">
       <div className="bg-white w-full max-w-5xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden max-h-[90vh] flex flex-col">
         {/* Header */}
-        <div className="px-6 py-4 bg-[#384358] text-white flex items-center justify-between border-b border-[#2A3343]">
+        <div className="px-6 py-4 bg-[#004741] text-white flex items-center justify-between border-b border-[#003833]">
           <div>
             <h2 className="text-base font-bold text-white flex items-center gap-2">
-              <Award className="w-4 h-4 text-[#FFA586]" />
+              <Award className="w-4 h-4 text-[#F0EDE4]" />
               Side-by-Side Candidate Comparison ({candidates.length} Selected)
             </h2>
-            <p className="text-xs text-slate-300 mt-0.5">
+            <p className="text-xs text-[#E5DFD3] mt-0.5">
               Direct merit criteria comparison strictly isolating demographic indicators.
             </p>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-[#2A3343] transition-colors"
+            className="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-[#003530] transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -53,7 +53,7 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                         <p className="text-xs text-slate-500">{cand.jobTitle}</p>
                       </div>
                       <div className="text-right">
-                        <span className="text-2xl font-black text-blue-600">{cand.overallScore}</span>
+                        <span className="text-2xl font-black text-[#004741]">{cand.overallScore}</span>
                         <span className="text-[10px] text-slate-400 block font-semibold">/100 PTS</span>
                       </div>
                     </div>
@@ -146,7 +146,7 @@ export const CompareModal: React.FC<CompareModalProps> = ({
 
                   <button
                     onClick={() => onSelectCandidate(cand)}
-                    className="w-full mt-4 py-2 bg-[#FFA586] hover:bg-[#F58B68] text-[#2A3343] rounded-lg text-xs font-bold shadow-sm transition-colors"
+                    className="w-full mt-4 py-2 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded-lg text-xs font-bold shadow-sm transition-colors"
                   >
                     Inspect Full Dossier
                   </button>

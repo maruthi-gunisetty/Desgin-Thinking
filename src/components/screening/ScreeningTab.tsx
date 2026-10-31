@@ -419,7 +419,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
                         uploadedDoc.format === 'pdf' 
                           ? 'bg-rose-50 border border-rose-200 text-rose-700' 
                           : uploadedDoc.format === 'docx' || uploadedDoc.format === 'doc'
-                            ? 'bg-[#FFF5F2] border border-[#FFD4C5] text-[#C95733]'
+                            ? 'bg-[#F0EDE4] border border-[#D5CDBF] text-[#004741]'
                             : 'bg-emerald-50 border border-emerald-200 text-emerald-700'
                       }`}>
                         <div className="text-center">
@@ -432,7 +432,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
 
                       {/* File Details */}
                       <div className="min-w-0 flex-1">
-                        <h4 className="text-xs font-bold text-[#384358] truncate" title={uploadedDoc.name}>
+                        <h4 className="text-xs font-bold text-[#004741] truncate" title={uploadedDoc.name}>
                           {uploadedDoc.name}
                         </h4>
                         <div className="flex items-center gap-2 text-[11px] text-slate-500 mt-0.5">
@@ -459,7 +459,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
                   <div className="pt-2 border-t border-slate-200 flex items-center justify-between text-xs">
                     <button
                       onClick={() => fileInputRef.current?.click()}
-                      className="text-[#E5734E] hover:text-[#C95733] font-bold flex items-center gap-1 text-[11px]"
+                      className="text-[#004741] hover:underline font-bold flex items-center gap-1 text-[11px]"
                     >
                       <FileUp className="w-3.5 h-3.5" />
                       <span>Upload Different CV</span>
@@ -495,25 +495,25 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
                   onClick={() => fileInputRef.current?.click()}
                   className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${
                     isDragging
-                      ? 'border-[#FFA586] bg-[#FFF5F2]/80 ring-4 ring-[#FFA586]/20'
-                      : 'border-slate-300 hover:border-[#FFA586] hover:bg-[#FFF5F2]/30 bg-white'
+                      ? 'border-[#004741] bg-[#F0EDE4]/80 ring-4 ring-[#004741]/20'
+                      : 'border-[#E4DFD3] hover:border-[#004741] hover:bg-[#F0EDE4]/40 bg-white'
                   }`}
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#FFF5F2] text-[#E5734E] border border-[#FFD4C5] flex items-center justify-center mx-auto mb-3 shadow-sm">
+                  <div className="w-12 h-12 rounded-2xl bg-[#F0EDE4] text-[#004741] border border-[#D5CDBF] flex items-center justify-center mx-auto mb-3 shadow-sm">
                     <FileUp className="w-6 h-6" />
                   </div>
-                  <h4 className="text-xs font-bold text-[#384358] mb-1">
+                  <h4 className="text-xs font-bold text-[#004741] mb-1">
                     Upload Candidate CV Document
                   </h4>
                   <p className="text-xs text-slate-500 max-w-xs mx-auto mb-3">
-                    Drag and drop your file here, or <span className="text-[#E5734E] font-bold underline">browse local files</span>
+                    Drag and drop your file here, or <span className="text-[#004741] font-bold underline">browse local files</span>
                   </p>
 
                   <div className="flex items-center justify-center gap-1.5 flex-wrap">
                     <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">
                       PDF (.pdf)
                     </span>
-                    <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-[#FFF5F2] text-[#A74223] border border-[#FFD4C5]">
+                    <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-[#F0EDE4] text-[#004741] border border-[#D5CDBF]">
                       Word (.docx, .doc)
                     </span>
                     <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
@@ -539,16 +539,16 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
               <button
                 onClick={handleRunScreening}
                 disabled={isProcessing || !uploadedDoc}
-                className="ml-auto px-5 py-2.5 bg-[#FFA586] hover:bg-[#F58B68] text-[#2A3343] disabled:opacity-50 rounded-xl text-xs font-extrabold shadow-md transition-all flex items-center gap-2"
+                className="ml-auto px-5 py-2.5 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] disabled:opacity-50 rounded-xl text-xs font-extrabold shadow-md transition-all flex items-center gap-2"
               >
                 {isProcessing ? (
                   <>
-                    <Sparkles className="w-4 h-4 animate-spin text-[#2A3343]" />
+                    <Sparkles className="w-4 h-4 animate-spin text-[#F0EDE4]" />
                     <span>Processing Pipeline...</span>
                   </>
                 ) : (
                   <>
-                    <Play className="w-4 h-4 fill-[#2A3343] text-[#2A3343]" />
+                    <Play className="w-4 h-4 fill-[#F0EDE4] text-[#F0EDE4]" />
                     <span>Execute Blind Screening</span>
                   </>
                 )}
@@ -561,7 +561,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
         <div className="lg:col-span-7 space-y-4">
           {/* Pipeline Stages Progress Bar */}
           <div className="stat-card p-5">
-            <h3 className="text-xs font-bold text-[#384358] uppercase tracking-wider mb-4 flex items-center gap-2">
+            <h3 className="text-xs font-bold text-[#004741] uppercase tracking-wider mb-4 flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               Four-Stage Ethical AI Screening Pipeline
             </h3>
@@ -569,7 +569,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
             <div className="grid grid-cols-4 gap-2 text-center text-xs">
               {/* Stage 1 */}
               <div className={`p-2.5 rounded-lg border transition-all ${
-                pipelineStep >= 1 ? 'bg-[#FFF5F2] border-[#FFA586] text-[#A74223] font-bold' : 'bg-slate-50 border-slate-200 text-slate-400'
+                pipelineStep >= 1 ? 'bg-[#F0EDE4] border-[#004741] text-[#004741] font-bold' : 'bg-slate-50 border-slate-200 text-slate-400'
               }`}>
                 <div className="text-[10px] uppercase tracking-wider mb-1 font-mono">Stage 1</div>
                 <div className="flex items-center justify-center gap-1">
@@ -580,7 +580,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
 
               {/* Stage 2 */}
               <div className={`p-2.5 rounded-lg border transition-all ${
-                pipelineStep >= 2 ? 'bg-[#E6EBF3] border-[#384358] text-[#384358] font-bold' : 'bg-slate-50 border-slate-200 text-slate-400'
+                pipelineStep >= 2 ? 'bg-[#E6F2F1] border-[#004741] text-[#004741] font-bold' : 'bg-slate-50 border-slate-200 text-slate-400'
               }`}>
                 <div className="text-[10px] uppercase tracking-wider mb-1 font-mono">Stage 2</div>
                 <div className="flex items-center justify-center gap-1">
@@ -591,7 +591,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
 
               {/* Stage 3 */}
               <div className={`p-2.5 rounded-lg border transition-all ${
-                pipelineStep >= 3 ? 'bg-[#FFF5F2] border-[#FFA586] text-[#A74223] font-bold' : 'bg-slate-50 border-slate-200 text-slate-400'
+                pipelineStep >= 3 ? 'bg-[#F0EDE4] border-[#004741] text-[#004741] font-bold' : 'bg-slate-50 border-slate-200 text-slate-400'
               }`}>
                 <div className="text-[10px] uppercase tracking-wider mb-1 font-mono">Stage 3</div>
                 <div className="flex items-center justify-center gap-1">
@@ -602,7 +602,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
 
               {/* Stage 4 */}
               <div className={`p-2.5 rounded-lg border transition-all ${
-                pipelineStep >= 4 ? 'bg-[#384358] border-[#384358] text-[#FFA586] font-bold' : 'bg-slate-50 border-slate-200 text-slate-400'
+                pipelineStep >= 4 ? 'bg-[#004741] border-[#004741] text-[#F0EDE4] font-bold' : 'bg-slate-50 border-slate-200 text-slate-400'
               }`}>
                 <div className="text-[10px] uppercase tracking-wider mb-1 font-mono">Stage 4</div>
                 <div className="flex items-center justify-center gap-1">
@@ -615,15 +615,15 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
 
           {/* Parsed Output or Empty Placeholder */}
           {parsedCandidate ? (
-            <div className="stat-card p-6 space-y-5 border-2 border-[#FFA586]/50 animate-fadeIn">
+            <div className="stat-card p-6 space-y-5 border-2 border-[#004741]/30 animate-fadeIn">
               {/* Header */}
               <div className="flex items-start justify-between pb-4 border-b border-slate-200">
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-extrabold text-base text-[#384358]">
+                    <h3 className="font-extrabold text-base text-[#004741]">
                       {isAnonymized ? parsedCandidate.anonymizedId : parsedCandidate.name}
                     </h3>
-                    <span className="text-xs px-2 py-0.5 rounded bg-[#FFF5F2] text-[#A74223] border border-[#FFD4C5] font-mono font-bold">
+                    <span className="text-xs px-2 py-0.5 rounded bg-[#F0EDE4] text-[#004741] border border-[#D5CDBF] font-mono font-bold">
                       {parsedCandidate.id}
                     </span>
                     <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">
@@ -636,7 +636,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
                 </div>
 
                 <div className="text-right">
-                  <span className="text-4xl font-black text-[#384358]">{parsedCandidate.overallScore}</span>
+                  <span className="text-4xl font-black text-[#004741]">{parsedCandidate.overallScore}</span>
                   <span className="text-xs font-bold text-slate-400 block">/ 100 PTS</span>
                 </div>
               </div>
@@ -692,7 +692,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
               <div className="pt-3 border-t border-slate-200 flex items-center justify-between">
                 <button
                   onClick={() => onSelectCandidate(parsedCandidate)}
-                  className="text-xs font-semibold text-blue-600 hover:text-blue-700"
+                  className="text-xs font-semibold text-[#004741] hover:underline"
                 >
                   View Full Candidate Dossier &rarr;
                 </button>
@@ -703,7 +703,7 @@ export const ScreeningTab: React.FC<ScreeningTabProps> = ({
                   className={`px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5 ${
                     hasAdded 
                       ? 'bg-emerald-600 text-white' 
-                      : 'bg-blue-600 hover:bg-blue-700 text-white'
+                      : 'bg-[#004741] hover:bg-[#003833] text-[#F0EDE4]'
                   }`}
                 >
                   <CheckCircle2 className="w-4 h-4" />

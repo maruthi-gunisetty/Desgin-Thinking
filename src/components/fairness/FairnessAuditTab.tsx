@@ -94,9 +94,9 @@ export const FairnessAuditTab: React.FC<FairnessAuditTabProps> = ({
 
           <button
             onClick={onOpenCertificate}
-            className="flex items-center gap-1.5 px-4 py-2 bg-[#FFA586] hover:bg-[#ff9670] text-[#2A3343] rounded-xl text-xs font-bold shadow-sm transition-colors"
+            className="flex items-center gap-1.5 px-4 py-2 bg-[#004741] hover:bg-[#003833] text-[#F0EDE4] rounded-xl text-xs font-bold shadow-sm transition-colors"
           >
-            <Sparkles className="w-4 h-4 text-[#384358]" />
+            <Sparkles className="w-4 h-4 text-[#F0EDE4]" />
             <span>Generate Official Certificate</span>
           </button>
         </div>
@@ -167,13 +167,13 @@ export const FairnessAuditTab: React.FC<FairnessAuditTabProps> = ({
       </div>
 
       {/* The EEOC 4/5ths Rule Educational Explanation */}
-      <div className="p-4 rounded-xl bg-[#384358]/5 border border-[#384358]/15 text-xs text-[#384358] flex items-start gap-3">
-        <Info className="w-5 h-5 text-[#384358] flex-shrink-0 mt-0.5" />
+      <div className="p-4 rounded-xl bg-[#004741]/5 border border-[#004741]/15 text-xs text-[#004741] flex items-start gap-3">
+        <Info className="w-5 h-5 text-[#004741] flex-shrink-0 mt-0.5" />
         <div className="space-y-1">
-          <h4 className="font-bold text-[#384358] text-xs">
+          <h4 className="font-bold text-[#004741] text-xs">
             Understanding the Four-Fifths (80%) Rule for Algorithmic Integrity
           </h4>
-          <p className="leading-relaxed text-[#384358]/85">
+          <p className="leading-relaxed text-[#004741]/85">
             Under 29 C.F.R. § 1607.4(D), a selection rate for any group that is less than <strong>80% of the selection rate of the benchmark group</strong> constitutes adverse impact. FairHire AI continuously inspects shortlisting distributions without ever exposing candidate demographic attributes to the primary scoring algorithms.
           </p>
         </div>
@@ -188,7 +188,7 @@ export const FairnessAuditTab: React.FC<FairnessAuditTabProps> = ({
               onClick={() => setActiveCategory('gender')}
               className={`pb-3 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${
                 activeCategory === 'gender' 
-                  ? 'border-[#FFA586] text-[#384358]' 
+                  ? 'border-[#004741] text-[#004741]' 
                   : 'border-transparent text-slate-400 hover:text-slate-700'
               }`}
             >
@@ -198,7 +198,7 @@ export const FairnessAuditTab: React.FC<FairnessAuditTabProps> = ({
               onClick={() => setActiveCategory('ethnicity')}
               className={`pb-3 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${
                 activeCategory === 'ethnicity' 
-                  ? 'border-[#FFA586] text-[#384358]' 
+                  ? 'border-[#004741] text-[#004741]' 
                   : 'border-transparent text-slate-400 hover:text-slate-700'
               }`}
             >
@@ -208,7 +208,7 @@ export const FairnessAuditTab: React.FC<FairnessAuditTabProps> = ({
               onClick={() => setActiveCategory('ageGroup')}
               className={`pb-3 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${
                 activeCategory === 'ageGroup' 
-                  ? 'border-[#FFA586] text-[#384358]' 
+                  ? 'border-[#004741] text-[#004741]' 
                   : 'border-transparent text-slate-400 hover:text-slate-700'
               }`}
             >
@@ -246,7 +246,7 @@ export const FairnessAuditTab: React.FC<FairnessAuditTabProps> = ({
                         <div className="flex items-center gap-2">
                           <span className="font-bold text-slate-900">{row.groupName}</span>
                           {isBenchmark && (
-                            <span className="text-[10px] font-semibold bg-[#FFA586]/20 text-[#384358] border border-[#FFA586]/40 px-1.5 py-0.5 rounded">
+                            <span className="text-[10px] font-semibold bg-[#F0EDE4] text-[#004741] border border-[#D5CDBF] px-1.5 py-0.5 rounded">
                               Benchmark Group
                             </span>
                           )}
@@ -266,7 +266,7 @@ export const FairnessAuditTab: React.FC<FairnessAuditTabProps> = ({
                           <span className="font-bold text-slate-900 w-12">{row.selectionRate}%</span>
                           <div className="w-24 bg-slate-100 h-2 rounded-full overflow-hidden">
                             <div 
-                              className={`h-full rounded-full ${passesThreshold ? 'bg-[#384358]' : 'bg-rose-500'}`}
+                              className={`h-full rounded-full ${passesThreshold ? 'bg-[#004741]' : 'bg-rose-500'}`}
                               style={{ width: `${Math.min(100, row.selectionRate * 2.5)}%` }}
                             />
                           </div>

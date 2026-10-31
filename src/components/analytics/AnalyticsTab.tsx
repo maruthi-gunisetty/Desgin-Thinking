@@ -69,10 +69,10 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
 
   // Status Funnel
   const funnelData = [
-    { stage: 'Resumes Ingested', count: candidates.length, fill: '#384358' },
-    { stage: 'Automated Blind Screened', count: candidates.length, fill: '#46536C' },
-    { stage: 'Under Review', count: candidates.filter(c => c.status === 'Under Review').length + candidates.filter(c => c.status === 'Shortlisted').length, fill: '#F58B68' },
-    { stage: 'Merit Shortlisted', count: candidates.filter(c => c.status === 'Shortlisted').length, fill: '#FFA586' }
+    { stage: 'Resumes Ingested', count: candidates.length, fill: '#004741' },
+    { stage: 'Automated Blind Screened', count: candidates.length, fill: '#005E56' },
+    { stage: 'Under Review', count: candidates.filter(c => c.status === 'Under Review').length + candidates.filter(c => c.status === 'Shortlisted').length, fill: '#608D88' },
+    { stage: 'Merit Shortlisted', count: candidates.filter(c => c.status === 'Shortlisted').length, fill: '#A3C2BD' }
   ];
 
   // Selection Parity Data
@@ -92,7 +92,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-blue-600" />
+            <BarChart3 className="w-5 h-5 text-[#004741]" />
             <h2 className="text-lg font-bold text-slate-900">
               Enterprise Talent Analytics & Parity Reports
             </h2>
@@ -117,7 +117,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
             Time-to-Screen Savings
           </span>
           <div className="flex items-baseline gap-2 my-1">
-            <span className="text-3xl font-extrabold text-blue-600">-76%</span>
+            <span className="text-3xl font-extrabold text-[#004741]">-76%</span>
             <span className="text-xs text-emerald-600 font-semibold">vs Manual Review</span>
           </div>
           <p className="text-[11px] text-slate-500">From 18 mins to 4.2 secs per CV</p>
@@ -181,9 +181,9 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
                   contentStyle={{ backgroundColor: '#1E293B', color: '#fff', borderRadius: '8px', fontSize: '11px' }}
                   itemStyle={{ color: '#fff' }}
                 />
-                <Bar dataKey="count" fill="#384358" radius={[6, 6, 0, 0]} name="Candidates">
+                <Bar dataKey="count" fill="#004741" radius={[6, 6, 0, 0]} name="Candidates">
                   {scoreBuckets.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={index >= 3 ? '#FFA586' : index === 2 ? '#384358' : '#94A3B8'} />
+                    <Cell key={`cell-${index}`} fill={index >= 3 ? '#004741' : index === 2 ? '#006B62' : '#94A3B8'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -191,7 +191,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
           </div>
 
           <p className="text-[11px] text-slate-500 text-center">
-            Coral bars indicate candidates meeting or exceeding the target shortlisting threshold (&ge;80 pts).
+            Teal bars indicate candidates meeting or exceeding the target shortlisting threshold (&ge;80 pts).
           </p>
         </div>
 
@@ -199,7 +199,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
         <div className="stat-card p-5 space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-slate-200">
             <div>
-              <h3 className="font-bold text-sm text-[#384358]">Four-Fifths Ratio by Demographic Cohort</h3>
+              <h3 className="font-bold text-sm text-[#004741]">Four-Fifths Ratio by Demographic Cohort</h3>
               <p className="text-xs text-slate-500">Must maintain &ge; 80% of benchmark group rate</p>
             </div>
             <span className="text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">
@@ -218,9 +218,9 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
                   formatter={(val: number) => [`${val}% of Benchmark`, 'Selection Ratio']}
                 />
                 <ReferenceLine y={80} stroke="#EF4444" strokeDasharray="4 4" label={{ value: 'EEOC 80% Cutoff', fill: '#EF4444', fontSize: 10 }} />
-                <Bar dataKey="ratio" fill="#384358" radius={[4, 4, 0, 0]} name="4/5ths Ratio (%)">
+                <Bar dataKey="ratio" fill="#004741" radius={[4, 4, 0, 0]} name="4/5ths Ratio (%)">
                   {parityData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.ratio >= 80 ? '#FFA586' : '#EF4444'} />
+                    <Cell key={`cell-${index}`} fill={entry.ratio >= 80 ? '#004741' : '#EF4444'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -236,7 +236,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
         <div className="stat-card p-5 space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-slate-200">
             <div>
-              <h3 className="font-bold text-sm text-[#384358]">Top Technical Competencies in Pool</h3>
+              <h3 className="font-bold text-sm text-[#004741]">Top Technical Competencies in Pool</h3>
               <p className="text-xs text-slate-500">Extracted and verified across submitted resumes</p>
             </div>
             <span className="text-xs font-mono text-slate-400">NLP Extracted</span>
@@ -252,7 +252,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
                   contentStyle={{ backgroundColor: '#1E293B', color: '#fff', borderRadius: '8px', fontSize: '11px' }}
                   itemStyle={{ color: '#fff' }}
                 />
-                <Bar dataKey="count" fill="#FFA586" radius={[0, 6, 6, 0]} name="Candidates" />
+                <Bar dataKey="count" fill="#004741" radius={[0, 6, 6, 0]} name="Candidates" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -265,7 +265,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({
               <h3 className="font-bold text-sm text-slate-900">Recruitment Funnel Conversion</h3>
               <p className="text-xs text-slate-500">Progression from ingestion to merit shortlisting</p>
             </div>
-            <span className="text-xs font-bold text-blue-600">
+            <span className="text-xs font-bold text-[#004741]">
               {((funnelData[3].count / (funnelData[0].count || 1)) * 100).toFixed(0)}% Conversion
             </span>
           </div>
